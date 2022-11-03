@@ -1,4 +1,5 @@
 import React from 'react';
+import AuthNav from './auth-nav';
 import {  Link } from "react-router-dom";
 const Navbar= () =>{
   return (
@@ -49,6 +50,14 @@ const Navbar= () =>{
           </Link>
         <i className="topSearchIcon fas fa-search"></i>
       </div>
+      <div className="nav-container mb-3">
+      <nav className="navbar navbar-expand-md navbar-light bg-light">
+        <div className="container">
+          <div className="navbar-brand logo" />
+          <AuthNav />
+        </div>
+      </nav>
+    </div>
     </div>
   );
 }
