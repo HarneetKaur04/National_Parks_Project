@@ -1,7 +1,18 @@
 import React from 'react';
 import AuthNav from './auth-nav';
 import {  Link } from "react-router-dom";
+import { useAuth0 } from '@auth0/auth0-react';
+import Loading from "./loading";
+
 const Navbar= () =>{
+
+  const { isLoading } = useAuth0();
+  const { user } = useAuth0();
+  if (isLoading) {
+    return <Loading />;
+  }
+
+
   return (
     <div className="top">
       <div className="topLeft">
@@ -41,14 +52,17 @@ const Navbar= () =>{
       </div>
       <div className="topRight">
         
-          <Link className="link" to="/settings">
+          
+          
+      {!user ? null : (<><Link className="link" to="api/me">
             <img
               className="topImgRight"
               src="https://media-exp1.licdn.com/dms/image/C5603AQGX50b82Rl71Q/profile-displayphoto-shrink_200_200/0/1653429597671?e=1671062400&v=beta&t=dfsPxac6BfBPksQz54Ic5u0Zl4P_5xQkjWpQoW_chIA"
               alt="my picture facing front"
             />
           </Link>
-        <i className="topSearchIcon fas fa-search"></i>
+          <span>Hello {user.name}</span></>) }
+     
       </div>
       <div className="nav-container mb-3">
       <nav className="navbar navbar-expand-md navbar-light bg-light">

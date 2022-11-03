@@ -1,29 +1,48 @@
 import "./App.css";
-import NavBar from "./components/nav-bar";
+// import ReactPlayer from 'react-player'
+import React, {useState, useEffect} from 'react'
+import NavBar from "./components/Navbar";
 import Students from "./components/students";
 import Profile from "./components/profile";
-import { useAuth0 } from '@auth0/auth0-react';
-import Loading from "./components/loading";
+import Home from "./pages/Home";
+import AllParks from "./pages/AllParks";
+import SingleParkDetails from "./components/SingleParkDetails"
+
 import { Route, Routes, Link } from 'react-router-dom';
 
 function App() {
+  const [allParksData, setAllParksData] = useState([])
 
-  const { isLoading } = useAuth0();
-  const { user } = useAuth0();
-  if (isLoading) {
-    return <Loading />;
-  }
+  useEffect(() => {
+    const allParksData = async () => {
+      fetch("http://localhost:5000/parks")
+        .then((response) => response.json())
+        .then((parksData) => {
+            setAllParksData(parksData.data);
+            });
+          }
+          allParksData()
+    }, []);
+
+   
+
+
 
   return (
-    <div id="app" className="d-flex flex-column h-100">
+    <div className="App">
       <NavBar />
-      <div className="container flex-grow-1">
-      {!user ? <span>Hello from Techtonica</span> : <span>Hello <Link to="api/me">{user.name}</Link></span> }
+      
       <Routes>
-      <Route path="/" element={<Students user={user}/>} />
-      <Route path="api/me" element={<Profile user={user}/>} />
+      {/* <Route path="/" element={<Students user={user}/>} /> */}
+      {/* <Route path="api/me" element={<Profile user={user}/>} /> */}
+      <Route path='/' element={<Home parksInfo={allParksData}/>}/>
+      <Route path='/allparks' element={<AllParks parksInfo={allParksData} />}/>
+      <Route path='/allparks/:parkCode' element={<SingleParkDetails/>}/>
+          {/* // <Route path='/post' element={<Single/>}/>
+          // <Route path='/write' element={<Write/>}/>
+          <Route path='/favorite' element={<Favorite/>}/> */}
       </Routes>
-      </div>
+      
     </div>
   );
 }

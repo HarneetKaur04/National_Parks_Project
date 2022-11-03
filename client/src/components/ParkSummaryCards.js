@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ToggleFavorite from './ToggleFavorite'
+// import ToggleFavorite from './ToggleFavorite'
 
 const ParkSummaryCards = ({parksInfo, num, title, seeMore}) => {
 
@@ -18,7 +18,7 @@ const ParkSummaryCards = ({parksInfo, num, title, seeMore}) => {
           <div className= "image">
             <img src ={item.images[0].url} alt={item.images[0].altText}/>
             <h3>{item.fullName}</h3>
-            <ToggleFavorite parkCode={item.parkCode}/>
+            {/* <ToggleFavorite parkCode={item.parkCode}/> */}
           </div>
           <div className= "content">
             <p>{item.description}</p>
