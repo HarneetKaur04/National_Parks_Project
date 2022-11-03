@@ -3,8 +3,8 @@ import Router from "express";
 import { config } from "dotenv";
 config();
 
-// checking if API key works
-// console.log(process.env.REACT_APP_API_KEY)
+// checking if API key worksgi
+// console.log(process.env.REACT_APP_API_KEY)a
 
 const router = Router();
 // console.log(`https://developer.nps.gov/api/v1/parks?limit=100&api_key=${process.env.REACT_APP_API_KEY}`)
