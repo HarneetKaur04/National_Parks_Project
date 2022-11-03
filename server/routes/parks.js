@@ -1,4 +1,4 @@
-import db from "../db/db-connection.js";
+// import db from "../db/db-connection.js";
 import Router from "express";
 import { config } from "dotenv";
 config();
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
   try {
 // fetching data from API for all parks and setting limit to 100
     let allParksurl = `https://developer.nps.gov/api/v1/parks?parkCode=&limit=150&sort=&api_key=${process.env.REACT_APP_API_KEY}`
-    // console.log(allParksurl, "allParksurl")
+    console.log(allParksurl, "allParksurl")
 
     await fetch(allParksurl)
     .then(response => response.json())

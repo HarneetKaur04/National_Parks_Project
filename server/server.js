@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
-import favorite from "./routes/favorite.js";
+// import favorite from "./routes/favorite.js";
 import parks from "./routes/parks.js";
 import students from "./routes/students.js";
 import './db/db-connection.js';
@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 // app.use("/", allRouter);
 app.use("/parks", parks);
-app.use("/favorite", favorite);
+// app.use("/favorite", favorite);
 app.use("/students", students);
 
 
