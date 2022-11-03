@@ -57,8 +57,8 @@ const Navbar= () =>{
       {!user ? null : (<><Link className="link" to="api/me">
             <img
               className="topImgRight"
-              src="https://media-exp1.licdn.com/dms/image/C5603AQGX50b82Rl71Q/profile-displayphoto-shrink_200_200/0/1653429597671?e=1671062400&v=beta&t=dfsPxac6BfBPksQz54Ic5u0Zl4P_5xQkjWpQoW_chIA"
-              alt="my picture facing front"
+              src="https://static6.depositphotos.com/1010340/585/v/600/depositphotos_5859083-stock-illustration-panda-cartoon.jpg"
+              alt="happy panda facing front"
             />
           </Link>
           <span>Hello {user.name}</span></>) }
