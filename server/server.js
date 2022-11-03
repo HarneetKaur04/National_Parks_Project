@@ -3,7 +3,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 // import favorite from "./routes/favorite.js";
 import parks from "./routes/parks.js";
-import students from "./routes/students.js";
+import user from "./routes/user.js";
 import './db/db-connection.js';
 
 // set port and listen for requests
@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 // app.use("/", allRouter);
 app.use("/parks", parks);
 // app.use("/favorite", favorite);
-app.use("/students", students);
+app.use("/user", user);
 
 
 // console.log that your server is up and running

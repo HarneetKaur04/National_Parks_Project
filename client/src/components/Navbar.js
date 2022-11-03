@@ -54,7 +54,7 @@ const Navbar= () =>{
         
           
           
-      {!user ? null : (<><Link className="link" to="api/me">
+      {!user ? null : (<><Link className="link" to="/me">
             <img
               className="topImgRight"
               src="https://static6.depositphotos.com/1010340/585/v/600/depositphotos_5859083-stock-illustration-panda-cartoon.jpg"
