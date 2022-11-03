@@ -19,12 +19,15 @@
   align-items: center;
 }
 
-.topLeft,
-.topRight {
+.topLeft {
   flex: 3;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.topRight{
+  justify-content: right;
 }
 
 .topIcon {
@@ -66,11 +69,10 @@
 }
 
 .topImgRight{
-  width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 15px;
+  margin-right: 5px;
   cursor: pointer;
 
 }
