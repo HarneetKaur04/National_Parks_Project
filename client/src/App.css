@@ -179,14 +179,14 @@ path:hover {
   -webkit-box-orient: vertical;
 }
 .posts {
-  flex: 9;
-  display: flex;
+  display : flex ;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 10px;
+  justify-content: center;
 }
 
 .sidebar {
-  flex: 3;
+  /* flex: 3; */
   height: fit-content;
   padding-bottom: 30px;
   background-color: #fdfbfb;
@@ -511,7 +511,8 @@ path:hover {
 }
 
 .post {
-  margin: none;
+  margin: .5px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   background-color:white;
@@ -554,6 +555,24 @@ path:hover {
 
 .fa-sharp.fa-solid.fa-heart-crack {
   color: blue;
+
+}
+
+.user_profile {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user_img{
+  flex:4;
+  width: 100%;
+}
+
+.user_details {
+  flex: 8;
+  width: 100%;
+  /* text-align: center; */
+  margin-top: 4%;
+  margin-left: 4%;
 
 }
 
