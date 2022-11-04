@@ -10,7 +10,7 @@ const router = Router();
 router.get("/", async (req, res) => {
   try {
 // fetching data from API for all parks and setting limit to 100
-    let allactivitiessurl = `https://developer.nps.gov/api/v1/parks?parkCode=&limit=150&sort=&api_key=${process.env.REACT_APP_API_KEY}`
+    let allactivitiessurl = `https://developer.nps.gov/api/v1/activities/parks?id=&api_key=${process.env.REACT_APP_API_KEY}`
     console.log(allactivitiessurl, "allactivitiessurl")
 
     await fetch(allactivitiessurl)

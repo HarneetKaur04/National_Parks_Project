@@ -13,30 +13,45 @@ import { Route, Routes, Link } from 'react-router-dom';
 
 function App() {
   const [allParksData, setAllParksData] = useState([])
+  const [allActivitiesData, setAllActivitiesData] = useState([])
 
   const { user } = useAuth0();
 
-  useEffect(() => {
-    const allParksData = async () => {
+ 
+    const handleAllParksData = async () => {
       fetch("http://localhost:5000/parks")
         .then((response) => response.json())
         .then((parksData) => {
             setAllParksData(parksData.data);
             });
-          }
-          allParksData()
-    }, []);
+          };
+          
+    const handleAllActivitiesData = async () => {
+            fetch("http://localhost:5000/activities")
+              .then((response) => response.json())
+              .then((activitiesData) => {
+                setAllActivitiesData(activitiesData.data);
+                  });
+              }
+              
+              useEffect(() => {
+                handleAllActivitiesData()
+                handleAllParksData()
+              }, []);
 
-  useEffect(() => {
-      const allActivitiesData = async () => {
-        fetch("http://localhost:5000/activities")
-          .then((response) => response.json())
-          .then((activitiesData) => {
-              setAllParksData(activitiesData.data);
-              });
-            }
-            allActivitiesData()
-      }, []);
+    // const allActivitiesData = async () => {
+    //   fetch("http://localhost:5000/activities")
+    //     .then((response) => response.json())
+    //     .then((activitiesData) => {
+    //       setAllActivitiesData(activitiesData.data);
+    //         });
+    //       }
+    //       allActivitiesData()
+    // }, []);
+
+      
+
+      console.log(allActivitiesData, "allActivitiesData****")
 
   return (
     <div className="App">
@@ -45,7 +60,7 @@ function App() {
       <Routes>
       {/* <Route path="/" element={<Students user={user}/>} /> */}
       <Route path="/me" element={<Profile user={user}/>} />
-      <Route path='/' element={<Home parksInfo={allParksData}/>}/>
+      <Route path='/' element={<Home parksInfo={allParksData} activitiesInfo={allActivitiesData}/>}/>
       <Route path='/allparks' element={<AllParks parksInfo={allParksData} />}/>
       <Route path='/activities' element={<Activities activitiesInfo={allActivitiesData} />}/>
       <Route path='/allparks/:parkCode' element={<SingleParkDetails/>}/>
