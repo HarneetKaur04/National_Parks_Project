@@ -1,10 +1,14 @@
 import React, { Component, useState } from 'react'
 import USAMap from "react-usa-map";
+import ParkSummaryCards from './ParkSummaryCards';
+import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({parksInfo}) => {
+
+  const [stateSelected, setStateSelected] = useState(null)
 
   const mapHandler = (event) => {
-    console.log(event.target.dataset.name); 
+    setStateSelected(event.target.dataset.name)
   };
 
 
@@ -18,8 +22,12 @@ const Header = () => {
      <div className="headerTitles">
       <div className="headerTitleLg">The Great Outdoors</div>
       <div className="headerTitleSml">EXPLORE ~ AWAKEN ~ DISCOVER</div>
+      
       <div className="map">
-        <USAMap onClick={mapHandler}/>
+        
+        <USAMap  onClick={mapHandler} />
+        <span className='headerStateSelect'>{!stateSelected? "Select a State" : (<p>You Selected:<p><Link to="/allparks" state={{ data: stateSelected }}>{stateSelected}</Link></p></p>)}</span>
+
       </div>
     </div>
   </div>
