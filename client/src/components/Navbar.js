@@ -33,6 +33,11 @@ const Navbar= () =>{
             </Link>
           </li>
           <li className="topListItem">
+            <Link className="link" to="/activities">
+              ACTIVITIES
+            </Link>
+          </li>
+          <li className="topListItem">
             <Link className="link" to="/myparks">
               MY PARKS
             </Link>

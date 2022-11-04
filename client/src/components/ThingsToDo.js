@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ThingsToDo = ({parksInfo}) => {
+const ThingsToDo = ({parksInfo, num}) => {
   let filterActivitiesWithMoreNumber= []
   function lala (parksInfo) {
     for (let i = 0; i<parksInfo.length; i++){
@@ -23,7 +23,7 @@ console.log(filterActivitiesWithMoreNumber, "filterActivitiesWithMoreNumberAgain
     <h2>Things to Do</h2>
     <button>See More</button>
     <div className='posts' >
-    {filterActivitiesWithMoreNumber.slice(0,6).map((item,index) => (
+    {filterActivitiesWithMoreNumber.filter(index => index % num).map((item,index) => (
         <div className="card_img" key={index}>
           <h3>{item.name}</h3>
         </div> 
