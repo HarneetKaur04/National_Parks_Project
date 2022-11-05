@@ -440,6 +440,16 @@ path:hover {
   height : 320px;    
 }
 
+.card2 {
+  width : 250px;
+  height : 215px;  
+  background-color : #fff;
+  margin : 30px 10px;
+  padding : 20px 15px;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  border-radius : 15px;
+}
+
 
 .container .card .image {
   position : relative;

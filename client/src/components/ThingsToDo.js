@@ -1,31 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-const ThingsToDo = ({num, activitiesInfo}) => {
-//   let filterActivitiesWithMoreNumber= []
-//   function lala (parksInfo) {
-//     for (let i = 0; i<activitiesInfo.length; i++){
-//       // console.log(parksInfo[i].activities.length, "check")
-//       if (parksInfo[i].activities.length >=6) {
-//         filterActivitiesWithMoreNumber.push(parksInfo[i].activities)
-//         filterActivitiesWithMoreNumber = filterActivitiesWithMoreNumber[0]
-//         return filterActivitiesWithMoreNumber
-//       } 
-//     } 
-//   }
-
-// lala(parksInfo)
-
+const ThingsToDo = ({activitiesInfo, seeMore}) => {
 
 console.log(activitiesInfo, "activitiesInfo****")
 
   return (
     <>
     <h2>Things to Do</h2>
-    <button>See More</button>
+    <Link to="/activities">{seeMore}</Link>
     <div className='posts' >
     {activitiesInfo.map((item,index) => (
         <div className="card_img" key={index}>
-          <h3>{item.name}</h3>
+          <h3><Link to={`/activities/${item.name}`} state={{ data: item.name }}>{item.name}</Link></h3>
         </div> 
       )     
     )} 

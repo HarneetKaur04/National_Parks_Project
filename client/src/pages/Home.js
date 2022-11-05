@@ -15,7 +15,7 @@ const Home = ({parksInfo, activitiesInfo}) => {
     <>
         <Header/>
         <ParkSummaryCards parksInfo={parksInfo} num={15} title={"Explore"} seeMore={<button>See More</button>}/>
-        <ThingsToDo activitiesInfo={fewActivities} num= {6}/>
+        <ThingsToDo activitiesInfo={fewActivities} num= {6} seeMore={<button>See More</button>}/>
         <ExplorePics parksInfo={parksInfo}/>
     </>
   )

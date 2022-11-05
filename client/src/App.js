@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import AllParks from "./pages/AllParks";
 import Activities from "./pages/Activities";
 import SingleParkDetails from "./components/SingleParkDetails"
+import SingleActivity from "./components/singleActivity";
 
 import { Route, Routes, Link } from 'react-router-dom';
 
@@ -62,7 +63,8 @@ function App() {
       <Route path="/me" element={<Profile user={user}/>} />
       <Route path='/' element={<Home parksInfo={allParksData} activitiesInfo={allActivitiesData}/>}/>
       <Route path='/allparks' element={<AllParks parksInfo={allParksData} />}/>
-      <Route path='/activities' element={<Activities activitiesInfo={allActivitiesData} />}/>
+      <Route path='/activities' element={<Activities activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
+      <Route path='/activities/:activityType' element={<SingleActivity activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
       <Route path='/allparks/:parkCode' element={<SingleParkDetails/>}/>
           {/* // <Route path='/post' element={<Single/>}/>
           // <Route path='/write' element={<Write/>}/>
