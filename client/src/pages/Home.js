@@ -6,13 +6,16 @@ import ThingsToDo from '../components/ThingsToDo'
 
 
 
-const Home = ({parksInfo}) => {
+const Home = ({parksInfo, activitiesInfo}) => {
+  console.log(activitiesInfo, "activitiesInfo Home")
+
+  let fewActivities = activitiesInfo.slice(0, 6)
 
   return (
     <>
         <Header/>
         <ParkSummaryCards parksInfo={parksInfo} num={15} title={"Explore"} seeMore={<button>See More</button>}/>
-        <ThingsToDo parksInfo={parksInfo} num= {6}/>
+        <ThingsToDo activitiesInfo={fewActivities} num= {6} seeMore={<button>See More</button>}/>
         <ExplorePics parksInfo={parksInfo}/>
     </>
   )

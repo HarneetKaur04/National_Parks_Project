@@ -3,6 +3,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 // import favorite from "./routes/favorite.js";
 import parks from "./routes/parks.js";
+import activities from "./routes/activities.js";
 import user from "./routes/user.js";
 import './db/db-connection.js';
 
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 
 // app.use("/", allRouter);
 app.use("/parks", parks);
+app.use("/activities", activities);
 // app.use("/favorite", favorite);
 app.use("/user", user);
 
