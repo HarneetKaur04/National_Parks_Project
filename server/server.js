@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 // import favorite from "./routes/favorite.js";
 import parks from "./routes/parks.js";
 import activities from "./routes/activities.js";
+import favorites from "./routes/favorites.js";
 import user from "./routes/user.js";
 import './db/db-connection.js';
 
@@ -15,6 +16,7 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // creates an endpoint for the route /api
 app.get('/', (req, res) => {
@@ -24,7 +26,7 @@ app.get('/', (req, res) => {
 // app.use("/", allRouter);
 app.use("/parks", parks);
 app.use("/activities", activities);
-// app.use("/favorite", favorite);
+app.use("/favorites", favorites);
 app.use("/user", user);
 
 

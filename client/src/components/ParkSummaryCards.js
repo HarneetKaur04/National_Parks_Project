@@ -1,11 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import ToggleFavorite from './ToggleFavorite'
 
 const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}) => {
 
   console.log(parksInfo, "check parksInfo State Card")
-  // let displayFewParksFromAllParks = parksInfo.filter((item, index)=> index % num === 0)
 
   let displayFewParksFromAllParks;
   function checkDataToDisplay () {
