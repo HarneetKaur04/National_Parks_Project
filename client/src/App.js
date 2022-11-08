@@ -41,18 +41,6 @@ function App() {
                 handleAllParksData()
               }, []);
 
-    // const allActivitiesData = async () => {
-    //   fetch("http://localhost:5000/activities")
-    //     .then((response) => response.json())
-    //     .then((activitiesData) => {
-    //       setAllActivitiesData(activitiesData.data);
-    //         });
-    //       }
-    //       allActivitiesData()
-    // }, []);
-
-      
-
       console.log(allActivitiesData, "allActivitiesData****")
 
   return (
@@ -67,7 +55,7 @@ function App() {
       <Route path='/activities' element={<Activities activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
       <Route path='/activities/:activityType' element={<SingleActivity activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
       <Route path='/allparks/:parkCode' element={<SingleParkDetails/>}/>
-      <Route path='/myparks' element={<MyParks/>}/>
+      <Route path='/myparks' element={<MyParks parksInfo={allParksData}/>}/>
       </Routes>
       
     </div>

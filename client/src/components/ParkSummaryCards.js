@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
+import ToggleFavorite from './ToggleFavorite'
 
 const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}) => {
 
@@ -7,6 +8,7 @@ const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}
 
   let displayFewParksFromAllParks;
   function checkDataToDisplay () {
+    
     if (singleStateParksInfo){
       console.log("hmm")
       displayFewParksFromAllParks = parksInfo.filter((item)=> item.states === singleStateParksInfo)
@@ -30,7 +32,7 @@ const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}
           <div className= "image">
             <img src ={item.images[0].url} alt={item.images[0].altText}/>
             <h3>{item.fullName}</h3>
-            {/* <ToggleFavorite parkCode={item.parkCode}/> */}
+            <ToggleFavorite selectedPark={item}/>
           </div>
           <div className= "content">
             <p>{item.description}</p>
