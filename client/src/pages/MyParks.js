@@ -7,10 +7,8 @@ const MyParks = ({parksInfo}) => {
     const { user } = useAuth0();
     const [favParks, setFavParks] = useState([])
 
-    
-    
     const handleDisplay = async() => {
-        console.log(user, "check if user present??")
+        console.log(user.sub, "check if user present??")
         if (user == undefined) {
             return (
                 <p><span>
@@ -28,28 +26,29 @@ const MyParks = ({parksInfo}) => {
         
     }
 }
-let moreDataOfSamePark = parksInfo.filter(elem => favParks.park_code.includes(elem.parkCode))
+let allParks = favParks.map(item => item.park_code)
+console.log(allParks, "allParks")
+let moreDataOfSamePark = parksInfo.filter(elem => allParks.includes(elem.parkCode))
+console.log(moreDataOfSamePark, "moreDataOfSamePark")
 
 useEffect(()=> {
     handleDisplay()
   },[])
 
 
-  console.log(favParks, "check favParks***")
-
   return (
     <div>
-        {/* {favParks? <ParkSummaryCards parksInfo={favParks} num ={1}/> : (<p><span>
+        {favParks? <ParkSummaryCards parksInfo={moreDataOfSamePark} num ={1}/> : (<p><span>
                     <a href="">Log in to see your favorite!</a>
-                </span></p>)} */}
-        {favParks ? (favParks.map(item=> (
+                </span></p>)}
+        {/* {favParks ? (moreDataOfSamePark.map(item=> (
             <>
         <p>{item.park_code}</p>
         <ToggleFavorite selectedPark={item}/>
         </>
         ))): (<p><span>
                     <a href="">Log in to see your favorite!</a>
-                </span></p>)}
+                </span></p>)} */}
 
     </div>
   )

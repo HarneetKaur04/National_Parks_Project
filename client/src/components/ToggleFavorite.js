@@ -40,7 +40,7 @@ const ToggleFavorite = ({selectedPark}) => {
         .then(response => response.json())
         .then(data => {
             console.log(fav.filter(item=> item.park_code != selectedPark.parkCode), "delete request")
-            setFav(fav.filter(item=> item.park_code != selectedPark.parkCode))
+            setFav([fav.filter(item=> item.park_code != selectedPark.parkCode)])
             setIsSaved(false)
         })
         }

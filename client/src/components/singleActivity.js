@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {Link, useParams} from 'react-router-dom'
 import Loading from './loading';
 import ParkSummaryCards from './ParkSummaryCards';
+import ToggleFavorite from './ToggleFavorite';
 // import { useLocation } from "react-router-dom";
 
 
@@ -31,6 +32,7 @@ const SingleActivity = ({activitiesInfo}) => {
                 <h3>{item.fullName}</h3>
                 <p>State: {item.states}</p>
                 <Link to={`/allparks/${item.parkCode}`}>Explore</Link>
+                <ToggleFavorite selectedPark={item}/>
             </div>    
         </div>
       )}
