@@ -4,17 +4,21 @@ import ParkSummaryCards from '../components/ParkSummaryCards';
 import ToggleFavorite from '../components/ToggleFavorite';
 
 const MyParks = ({parksInfo}) => {
-    const { user } = useAuth0();
+    const { loginWithRedirect, user} = useAuth0();
     const [favParks, setFavParks] = useState([])
+    const [userValid, setUserValid] = useState(false)
+    
 
     const handleDisplay = async() => {
-        console.log(user.sub, "check if user present??")
         if (user == undefined) {
-            return (
-                <p><span>
-                    <a href="">Log in to see your favorite!</a>
-                </span></p>);
+            console.log("invalid user")
+            // return (
+            //     <p><span>
+                    
+            //         <button onClick={() => loginWithRedirect()}>Please login to save your favorites!</button>
+            //     </span></p>);
         } else {
+            setUserValid(true)
         let userSub = user.sub
         await fetch(`http://localhost:5000/favorites/${userSub}`)
         .then(response => response.json() )
@@ -26,10 +30,13 @@ const MyParks = ({parksInfo}) => {
         
     }
 }
+
 let allParks = favParks.map(item => item.park_code)
 console.log(allParks, "allParks")
 let moreDataOfSamePark = parksInfo.filter(elem => allParks.includes(elem.parkCode))
 console.log(moreDataOfSamePark, "moreDataOfSamePark")
+
+console.log(favParks, "favParks")
 
 useEffect(()=> {
     handleDisplay()
@@ -38,8 +45,8 @@ useEffect(()=> {
 
   return (
     <div>
-        {favParks? <ParkSummaryCards parksInfo={moreDataOfSamePark} num ={1}/> : (<p><span>
-                    <a href="">Log in to see your favorite!</a>
+        {userValid? <ParkSummaryCards parksInfo={moreDataOfSamePark} num ={1}/> : (<p><span>
+            <button onClick={() => loginWithRedirect()}>Please login to save your favorites!</button>
                 </span></p>)}
         {/* {favParks ? (moreDataOfSamePark.map(item=> (
             <>
