@@ -46,16 +46,14 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      
       <Routes>
-      {/* <Route path="/" element={<Students user={user}/>} /> */}
-      <Route path="/me" element={<Profile user={user}/>} />
-      <Route path='/' element={<Home parksInfo={allParksData} activitiesInfo={allActivitiesData}/>}/>
-      <Route path='/allparks' element={<AllParks parksInfo={allParksData} />}/>
-      <Route path='/activities' element={<Activities activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
-      <Route path='/activities/:activityType' element={<SingleActivity activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
-      <Route path='/allparks/:parkCode' element={<SingleParkDetails/>}/>
-      <Route path='/myparks' element={<MyParks parksInfo={allParksData}/>}/>
+        <Route path="/me" element={<Profile user={user}/>} />
+        <Route path='/' element={<Home parksInfo={allParksData} activitiesInfo={allActivitiesData}/>}/>
+        <Route path='/allparks' element={<AllParks parksInfo={allParksData} />}/>
+        <Route path='/activities' element={<Activities activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
+        <Route path='/activities/:activityType' element={<SingleActivity activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
+        <Route path='/allparks/:parkCode' element={<SingleParkDetails/>}/>
+        <Route path='/myparks' element={<MyParks parksInfo={allParksData}/>}/>
       </Routes>
       
     </div>
