@@ -5,7 +5,7 @@ import ToggleFavorite from './ToggleFavorite'
 
 const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}) => {
 
-  const { user } = useAuth0();
+  const { loginWithRedirect, user } = useAuth0();
 
   console.log(parksInfo, "check parksInfo State Card")
 
@@ -35,7 +35,7 @@ const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}
           <div className= "image">
             <img src ={item.images[0].url} alt={item.images[0].altText}/>
             <h3>{item.fullName}</h3>
-            {user? <ToggleFavorite selectedPark={item}/> : <button><Link to="">Add</button>}
+            {user? <ToggleFavorite selectedPark={item}/> : <button onClick={() => loginWithRedirect()}>Add</button>}
           </div>
           <div className= "content">
             <p>{item.description}</p>
