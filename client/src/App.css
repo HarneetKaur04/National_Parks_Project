@@ -669,7 +669,7 @@ path:hover {
 
 .formBorder {
   display: flex;
-  width: 70%;
+  width: 80%;
   align-items: center;
   margin: auto auto;
   flex-wrap: wrap;
@@ -677,17 +677,36 @@ path:hover {
 
 .formSide{
   flex:2;
-  background: orange;
-  height: 200px;
+  background: rgb(241, 210, 151);
+  height: 300px;
+  margin: 0.25%;
+  border-radius: 12px;
+  
 }
 .formcentre {
   flex:4;
-  height: 300px;
+  height: 400px;
   text-align: center;
   background: black;
+  border-radius: 12px;
+  color: white;
+  font-size: 30px;
+  padding: 2%;
 }
 .formInput {
   text-align: left;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+.formSide h3 {
+  text-align: center;
+  margin-top: 15%;
+  padding:2%;
+}
+
+#add-user {
+  width: 50%;
 }
 
 

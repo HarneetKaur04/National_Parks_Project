@@ -41,35 +41,36 @@ const Form = () => {
 
   return (
   <>
-  <div className="form">
+    <div className="form">
     <div className="formBorder">
-    <div className="formSide">Image</div>
-  <form className="formcentre" onSubmit={handleSubmit}>Subscribe now!
-        <fieldset className="formInput">
-          <label>First Name</label>
+      <img className="formSide" src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-4.0.3"/>
+      <form className="formcentre" onSubmit={handleSubmit}>LOVE National Parks? 
+        <fieldset className="formInput"> We can't help it either. Get inspired with tips about where to go and what to see on your national park vacation, delivered right to your inbox. <br/><br/>
+          <label>First Name</label><br/>
           <input
             type="text"
-            id="add-user-name"
+            id="add-user"
             placeholder="First Name"
             required
             value={form.firstname}
             onChange={handleNameChange}
           /><br/>
-          <label>Email</label>
+          <label>Email</label><br/>
           <input
             type="text"
-            id="add-user-email"
+            id="add-user"
             placeholder="Email"
             required
             value={form.email}
             onChange={handleEmailChange}
-          />
+          /><br/><br/>
+          <button type="submit">Submit</button>
         </fieldset>
-        <button type="submit">Submit</button>
-    
       {submitted? (<p>Registered Successfully!</p>): null}
       </form>
-      <div className="formSide">Image2</div>
+      <div className="formSide">
+        <h3>"In every walk with nature one receives far more than he seeks." <br/> <br/> - John Muir</h3>
+      </div>
       </div>
       </div>
   </>
