@@ -1,66 +1,42 @@
 import { useState } from "react";
 
-const Form = (props) => {
+const Form = () => {
 
-  const {initialStudent = {id: null, 
-                          firstname: "", 
-                        lastname: ""}} = props;
+  const initialFormData = {firstname: "", email: ""}
 
-
-  // This is the oroginal State with not initial student 
-  const [student, setStudent] = useState(initialStudent);
+  // This is the oroginal State with emplty initial data 
+  const [form, setForm] = useState(initialFormData);
 
   //create functions that handle the event of the user typing into the form
   const handleNameChange = (event) => {
     const firstname = event.target.value;
-    setStudent((student) => ({ ...student, firstname }));
+    setForm((form) => ({ ...form, firstname }));
   };
 
-  const handleLastnameChange = (event) => {
-    const lastname = event.target.value;
-    setStudent((student) => ({ ...student, lastname }));
+  const handleEmailChange = (event) => {
+    const email = event.target.value;
+    setForm((form) => ({ ...form, email }));
   };
 
   //A function to handle the post request
-  const postStudent = (newStudent) => {
-    return fetch("http://localhost:8080/api/students", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newStudent),
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        console.log("From the post ", data);
-        props.saveStudent(data);
-      });
+  const postSubscriber = async(form) => {
+    console.log(form, "fields in form")
+    // return await fetch("http://localhost:5000/contact", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(setForm),
+    // })
+    //   .then((response) => {
+    //     return response.json();
+    //   })
+    //   .then((data) => {
+    //     console.log("From the post ", data);
+    //   });
   };
-
-    //A function to handle the Update request
-    const updateStudent = (existingStudent) =>{
-      return fetch(`http://localhost:8080/api/students/${existingStudent.id}`, {
-          method: 'PUT',
-          headers: {'Content-Type': 'application/json'}, 
-          body: JSON.stringify(existingStudent)
-        }).then((response) => {
-            return response.json()
-        }).then((data) => {
-          console.log("From put request ", data);
-          props.saveStudent(data);
-      });
-
-  }
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(student.id){
-      updateStudent(student);
-    } else{
-      postStudent(student);
-    }
-    
+    postSubscriber(form);  
   };
 
   return (
@@ -72,20 +48,20 @@ const Form = (props) => {
           id="add-user-name"
           placeholder="First Name"
           required
-          value={student.firstname}
+          value={form.firstname}
           onChange={handleNameChange}
         />
-        <label>Last Name</label>
+        <label>Email</label>
         <input
           type="text"
-          id="add-user-lastname"
-          placeholder="Last Name"
+          id="add-user-email"
+          placeholder="Email"
           required
-          value={student.lastname}
-          onChange={handleLastnameChange}
+          value={form.email}
+          onChange={handleEmailChange}
         />
       </fieldset>
-      <button type="submit">{!student.id ? "ADD": "SAVE"}</button>
+      <button type="submit">Submit</button>
     </form>
   );
 };
