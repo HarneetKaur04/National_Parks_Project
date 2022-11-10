@@ -8,6 +8,7 @@ import parks from "./routes/parks.js";
 import activities from "./routes/activities.js";
 import favorites from "./routes/favorites.js";
 import user from "./routes/user.js";
+import newsletterSubscriber from "./routes/newsletterSubscriber.js";
 import './db/db-connection.js';
 
 // set port and listen for requests
@@ -35,7 +36,7 @@ app.use("/parks", parks);
 app.use("/activities", activities);
 app.use("/favorites", favorites);
 app.use("/user", user);
-
+app.use("/newsletterSubscriber", newsletterSubscriber);
 
 // console.log that your server is up and running
 app.listen(PORT, () => {
