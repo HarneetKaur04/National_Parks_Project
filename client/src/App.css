@@ -709,6 +709,16 @@ path:hover {
   width: 50%;
 }
 
+.contactTop {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.contactTop a {
+cursor: pointer;
+text-decoration: wavy;
+}
+
 
 
 

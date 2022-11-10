@@ -10,8 +10,9 @@ import Activities from "./pages/Activities";
 import MyParks from "./pages/MyParks";
 import SingleParkDetails from "./components/SingleParkDetails"
 import SingleActivity from "./components/singleActivity";
-
+import ContactUs from "./pages/ContactUs";
 import { Route, Routes, Link } from 'react-router-dom';
+
 
 function App() {
   const [allParksData, setAllParksData] = useState([])
@@ -54,6 +55,7 @@ function App() {
         <Route path='/activities/:activityType' element={<SingleActivity activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
         <Route path='/allparks/:parkCode' element={<SingleParkDetails/>}/>
         <Route path='/myparks' element={<MyParks parksInfo={allParksData}/>}/>
+        <Route path='/contact' element={<ContactUs />}/>
       </Routes>
       
     </div>
