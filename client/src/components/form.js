@@ -37,6 +37,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     postSubscriber(form);  
+    <p>Successfully subscribed</p>
   };
 
   return (
