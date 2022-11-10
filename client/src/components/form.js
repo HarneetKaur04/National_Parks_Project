@@ -21,17 +21,17 @@ const Form = () => {
   //A function to handle the post request
   const postSubscriber = async(form) => {
     console.log(form, "fields in form")
-    // return await fetch("http://localhost:5000/contact", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(setForm),
-    // })
-    //   .then((response) => {
-    //     return response.json();
-    //   })
-    //   .then((data) => {
-    //     console.log("From the post ", data);
-    //   });
+    return await fetch("http://localhost:5000/newsletterSubscriber", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log("From the post ", data);
+      });
   };
 
   const handleSubmit = (e) => {
