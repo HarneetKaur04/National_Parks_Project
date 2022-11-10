@@ -667,6 +667,33 @@ path:hover {
 }
 
 
+.formBorder {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  margin: auto auto;
+  flex-wrap: wrap;
+}
+
+.formSide{
+  flex:2;
+  background: orange;
+  height: 200px;
+}
+.formcentre {
+  flex:4;
+  height: 300px;
+  text-align: center;
+  background: black;
+}
+.formInput {
+  text-align: left;
+}
+
+
+
+
+
 
    
 

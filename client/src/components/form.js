@@ -41,8 +41,11 @@ const Form = () => {
 
   return (
   <>
-  <form onSubmit={handleSubmit}>
-        <fieldset>
+  <div className="form">
+    <div className="formBorder">
+    <div className="formSide">Image</div>
+  <form className="formcentre" onSubmit={handleSubmit}>Subscribe now!
+        <fieldset className="formInput">
           <label>First Name</label>
           <input
             type="text"
@@ -51,7 +54,7 @@ const Form = () => {
             required
             value={form.firstname}
             onChange={handleNameChange}
-          />
+          /><br/>
           <label>Email</label>
           <input
             type="text"
@@ -63,9 +66,14 @@ const Form = () => {
           />
         </fieldset>
         <button type="submit">Submit</button>
-    </form>
+    
       {submitted? (<p>Registered Successfully!</p>): null}
+      </form>
+      <div className="formSide">Image2</div>
+      </div>
+      </div>
   </>
+  
   )
 };
 
