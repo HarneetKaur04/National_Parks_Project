@@ -1,12 +1,12 @@
 import ReactPlayer from 'react-player'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Landing = () => {
   return (
-    <div>
-         
-        <button className='landing_start_button'>Get Started</button>
-        <ReactPlayer url="/landing1.mp4" width="100%" height="100%" controls/>
+    <div className='landing_start'>
+       <Link className='landing_start_button' to={'/home'}><p>Get Started</p></Link>
+        <ReactPlayer className='landing_video' width="100%" height="auto" url="/landing1.mp4"  controls/>
     </div>
   )
 }
