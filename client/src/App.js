@@ -47,12 +47,11 @@ function App() {
 
   return (
     <>
-    <div className="App_landing">{window.location.pathname!== '/' ? <NavBar /> : null}
     <Routes>
         <Route path="/" element={<Landing />} />
     </Routes>
-    </div>
     <div className="App">
+      <NavBar/>
       <Routes>
         <Route path="/me" element={<Profile user={user}/>} />
         <Route path='/home' element={<Home parksInfo={allParksData} activitiesInfo={allActivitiesData}/>}/>
