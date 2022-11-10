@@ -5,9 +5,17 @@
   font-family: "Lora", serif;
 }
 
+.App_landing {
+  width: 100%;
+}
+
 .link {
   text-decoration: none;
   color: inherit;
+}
+
+.landing_start_button {
+  overflow: hidden;
 }
 
 .top {

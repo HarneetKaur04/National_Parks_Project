@@ -13,17 +13,18 @@ const Navbar= () =>{
   }
 
 
+
   return (
     <div className="top">
       <div className="topLeft">
-      <Link className="link" to="/">
+      <Link className="link" to="/home">
               <img className="topImgLeft" src='/logo.jpg'/>
         </Link>
       </div>
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
-            <Link className="link" to="/">
+            <Link className="link" to="/home">
               HOME
             </Link>
           </li>
