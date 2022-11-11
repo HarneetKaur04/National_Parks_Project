@@ -1,5 +1,4 @@
 import db from "../db/db-connection.js";
-import express from "express";
 import cors from "cors";
 import Router from "express";
 import { config } from "dotenv";

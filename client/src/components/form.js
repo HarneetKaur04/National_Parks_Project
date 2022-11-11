@@ -1,93 +1,81 @@
 import { useState } from "react";
 
-const Form = (props) => {
+const Form = () => {
 
-  const {initialStudent = {id: null, 
-                          firstname: "", 
-                        lastname: ""}} = props;
+  const initialFormData = {firstname: "", email: ""}
 
-
-  // This is the oroginal State with not initial student 
-  const [student, setStudent] = useState(initialStudent);
+  // This is the oroginal State with emplty initial data 
+  const [form, setForm] = useState(initialFormData);
+  const [submitted, setSubmitted] = useState(false)
 
   //create functions that handle the event of the user typing into the form
   const handleNameChange = (event) => {
     const firstname = event.target.value;
-    setStudent((student) => ({ ...student, firstname }));
+    setForm((form) => ({ ...form, firstname }));
   };
 
-  const handleLastnameChange = (event) => {
-    const lastname = event.target.value;
-    setStudent((student) => ({ ...student, lastname }));
+  const handleEmailChange = (event) => {
+    const email = event.target.value;
+    setForm((form) => ({ ...form, email }));
   };
 
   //A function to handle the post request
-  const postStudent = (newStudent) => {
-    return fetch("http://localhost:8080/api/students", {
+  const postSubscriber = async(form) => {
+    console.log(form, "fields in form")
+    await fetch("http://localhost:5000/newsletterSubscriber", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newStudent),
+      body: JSON.stringify(form),
     })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        console.log("From the post ", data);
-        props.saveStudent(data);
-      });
+    
+     
   };
-
-    //A function to handle the Update request
-    const updateStudent = (existingStudent) =>{
-      return fetch(`http://localhost:8080/api/students/${existingStudent.id}`, {
-          method: 'PUT',
-          headers: {'Content-Type': 'application/json'}, 
-          body: JSON.stringify(existingStudent)
-        }).then((response) => {
-            return response.json()
-        }).then((data) => {
-          console.log("From put request ", data);
-          props.saveStudent(data);
-      });
-
-  }
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(student.id){
-      updateStudent(student);
-    } else{
-      postStudent(student);
-    }
-    
+    postSubscriber(form);  
+    setForm({firstname: "", email: ""})
+    setSubmitted(true)
   };
+  console.log(form, "initialFormData")
 
   return (
-    <form onSubmit={handleSubmit}>
-      <fieldset>
-        <label>First Name</label>
-        <input
-          type="text"
-          id="add-user-name"
-          placeholder="First Name"
-          required
-          value={student.firstname}
-          onChange={handleNameChange}
-        />
-        <label>Last Name</label>
-        <input
-          type="text"
-          id="add-user-lastname"
-          placeholder="Last Name"
-          required
-          value={student.lastname}
-          onChange={handleLastnameChange}
-        />
-      </fieldset>
-      <button type="submit">{!student.id ? "ADD": "SAVE"}</button>
-    </form>
-  );
+  <>
+    <div className="form">
+    <div className="formBorder">
+      <img className="formSide" src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-4.0.3"/>
+      <form className="formcentre" onSubmit={handleSubmit}>LOVE National Parks? 
+        <fieldset className="formInput"> We can't help it either. Get inspired with tips about where to go and what to see on your national park vacation, delivered right to your inbox. <br/><br/>
+          <label>First Name</label><br/>
+          <input
+            type="text"
+            id="add-user"
+            placeholder="First Name"
+            required
+            value={form.firstname}
+            onChange={handleNameChange}
+          /><br/>
+          <label>Email</label><br/>
+          <input
+            type="text"
+            id="add-user"
+            placeholder="Email"
+            required
+            value={form.email}
+            onChange={handleEmailChange}
+          /><br/><br/>
+          <button type="submit">Submit</button>
+        </fieldset>
+      {submitted? (<p>Registered Successfully!</p>): null}
+      </form>
+      <div className="formSide">
+        <h3>"In every walk with nature one receives far more than he seeks." <br/> <br/> - John Muir</h3>
+      </div>
+      </div>
+      </div>
+  </>
+  
+  )
 };
 
 export default Form;

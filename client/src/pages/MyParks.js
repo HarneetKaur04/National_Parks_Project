@@ -12,11 +12,6 @@ const MyParks = ({parksInfo}) => {
     const handleDisplay = async() => {
         if (user == undefined) {
             console.log("invalid user")
-            // return (
-            //     <p><span>
-                    
-            //         <button onClick={() => loginWithRedirect()}>Please login to save your favorites!</button>
-            //     </span></p>);
         } else {
             setUserValid(true)
         let userSub = user.sub
