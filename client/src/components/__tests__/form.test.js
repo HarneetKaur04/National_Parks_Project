@@ -27,3 +27,12 @@ describe("Form", ()=> {
     });
 
 });
+
+describe('Image', () => {
+    test('Image must have src = "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-4.0.3" and alt = "book and camera"', () => {
+      render(<Form />);
+      const image = screen.getByRole('img');
+      expect(image).toHaveAttribute('src', 'https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-4.0.3');
+      expect(image).toHaveAttribute('alt', 'book and camera');
+    });
+  });

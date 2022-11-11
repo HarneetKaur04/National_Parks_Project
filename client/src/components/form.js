@@ -42,7 +42,7 @@ const Form = () => {
   <>
     <div className="form">
     <div className="formBorder">
-      <img className="formSide" src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-4.0.3"/>
+      <img className="formSide" src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-4.0.3" alt="book and camera"/>
       <form className="formcentre" onSubmit={handleSubmit}>LOVE National Parks? 
         <h4 className="formInput"> We can't help it either. Get inspired with tips about where to go and what to see on your national park vacation, delivered right to your inbox. <br/><br/>
           <label>First Name</label><br/>
