@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react'
 import NavBar from "./components/Navbar";
 import Profile from "./components/profile";
 import { useAuth0 } from '@auth0/auth0-react';
+import Landing from "./pages/Landing";
 import Home from "./pages/Home";
 import AllParks from "./pages/AllParks";
 import Activities from "./pages/Activities";
@@ -45,11 +46,15 @@ function App() {
       console.log(allActivitiesData, "allActivitiesData****")
 
   return (
+    <>
+    <Routes>
+        <Route path="/" element={<Landing />} />
+    </Routes>
     <div className="App">
-      <NavBar />
+      <NavBar/>
       <Routes>
         <Route path="/me" element={<Profile user={user}/>} />
-        <Route path='/' element={<Home parksInfo={allParksData} activitiesInfo={allActivitiesData}/>}/>
+        <Route path='/home' element={<Home parksInfo={allParksData} activitiesInfo={allActivitiesData}/>}/>
         <Route path='/allparks' element={<AllParks parksInfo={allParksData} />}/>
         <Route path='/activities' element={<Activities activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
         <Route path='/activities/:activityType' element={<SingleActivity activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
@@ -59,6 +64,7 @@ function App() {
       </Routes>
       
     </div>
+    </>
   );
 }
 

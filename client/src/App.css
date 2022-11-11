@@ -5,9 +5,40 @@
   font-family: "Lora", serif;
 }
 
+.App_landing {
+  width: 100%;
+}
+
 .link {
   text-decoration: none;
   color: inherit;
+}
+.landing_start{
+  position: relative;
+}
+
+.landing_start_button {
+  cursor: pointer;
+  position: absolute;
+  margin-top: 35%;
+  margin-left: 46%;
+  width: 150px;
+  height: 50px;
+  background-color: #f5f5ef;
+  border-radius: 10px;
+  animation: landing_start_button 2s linear infinite;
+  text-decoration: none;
+  z-index:2;
+  
+}
+.landing_start_button p {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+@keyframes landing_start_button {  
+  80% { opacity: 60%; }
 }
 
 .top {
