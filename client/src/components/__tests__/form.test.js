@@ -16,13 +16,13 @@ describe("Form", ()=> {
         const mockEventForm = jest.fn();
         render(<Form />)
         const buttonElement = screen.getByRole("button", {name: /Submit/i })
-        const inputEventElement = screen.getByTestId("add-event-name")
-        fireEvent.change(inputEventElement, {target: {value:"Thanksgiving Party"}})
-        const inputDateElement = screen.getByTestId("add-event-date")
-        fireEvent.change(inputDateElement, {target: {value:"2022-10-20"}})
+        const inputEventElement = screen.getByTestId("content-input");
+        fireEvent.change(inputEventElement, {target: {value:"harneet"}})
+        const inputEmailElement = screen.getByTestId("content-input2");
+        fireEvent.change(inputEmailElement, {target: {value:"test@test.com"}})
         fireEvent.click(buttonElement)
-        const newEventCreated = screen.getByDisplayValue(/Thanksgiving Party/i)
-        const newEventDateCreated = screen.getByDisplayValue(/2022-10-20/i)
+        const newEventNameCreated = screen.getByDisplayValue(/harneet/i)
+        const newEventEmailCreated = screen.getByDisplayValue(/test@test.com/i)
         
     });
 

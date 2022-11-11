@@ -736,7 +736,7 @@ path:hover {
   padding:2%;
 }
 
-#add-user {
+#add-user-name #add-user-email{
   width: 50%;
 }
 

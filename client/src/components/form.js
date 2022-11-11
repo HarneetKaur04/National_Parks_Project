@@ -34,7 +34,6 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     postSubscriber(form);  
-    setForm({firstname: "", email: ""})
     setSubmitted(true)
   };
   console.log(form, "initialFormData")
@@ -45,11 +44,12 @@ const Form = () => {
     <div className="formBorder">
       <img className="formSide" src="https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-4.0.3"/>
       <form className="formcentre" onSubmit={handleSubmit}>LOVE National Parks? 
-        <fieldset className="formInput"> We can't help it either. Get inspired with tips about where to go and what to see on your national park vacation, delivered right to your inbox. <br/><br/>
+        <h4 className="formInput"> We can't help it either. Get inspired with tips about where to go and what to see on your national park vacation, delivered right to your inbox. <br/><br/>
           <label>First Name</label><br/>
           <input
             type="text"
-            id="add-user"
+            data-testid= "content-input" 
+            id="add-user-name"
             placeholder="First Name"
             required
             value={form.firstname}
@@ -58,14 +58,15 @@ const Form = () => {
           <label>Email</label><br/>
           <input
             type="text"
-            id="add-user"
+            data-testid= "content-input2" 
+            id="add-user-email"
             placeholder="Email"
             required
             value={form.email}
             onChange={handleEmailChange}
           /><br/><br/>
           <button type="submit">Submit</button>
-        </fieldset>
+        </h4>
       {submitted? (<p>Registered Successfully!</p>): null}
       </form>
       <div className="formSide">
