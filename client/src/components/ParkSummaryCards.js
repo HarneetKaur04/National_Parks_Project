@@ -1,14 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
-// import ToggleFavorite from './ToggleFavorite'
+import { useAuth0 } from '@auth0/auth0-react';
+import ToggleFavorite from './ToggleFavorite'
 
 const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}) => {
 
+  const { loginWithRedirect, user } = useAuth0();
+
   console.log(parksInfo, "check parksInfo State Card")
-  // let displayFewParksFromAllParks = parksInfo.filter((item, index)=> index % num === 0)
 
   let displayFewParksFromAllParks;
   function checkDataToDisplay () {
+    
     if (singleStateParksInfo){
       console.log("hmm")
       displayFewParksFromAllParks = parksInfo.filter((item)=> item.states === singleStateParksInfo)
@@ -32,7 +35,7 @@ const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}
           <div className= "image">
             <img src ={item.images[0].url} alt={item.images[0].altText}/>
             <h3>{item.fullName}</h3>
-            {/* <ToggleFavorite parkCode={item.parkCode}/> */}
+            {user? <ToggleFavorite selectedPark={item}/> : <button onClick={() => loginWithRedirect()}>Add</button>}
           </div>
           <div className= "content">
             <p>{item.description}</p>

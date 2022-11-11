@@ -7,6 +7,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Home from "./pages/Home";
 import AllParks from "./pages/AllParks";
 import Activities from "./pages/Activities";
+import MyParks from "./pages/MyParks";
 import SingleParkDetails from "./components/SingleParkDetails"
 import SingleActivity from "./components/singleActivity";
 
@@ -40,18 +41,6 @@ function App() {
                 handleAllParksData()
               }, []);
 
-    // const allActivitiesData = async () => {
-    //   fetch("http://localhost:5000/activities")
-    //     .then((response) => response.json())
-    //     .then((activitiesData) => {
-    //       setAllActivitiesData(activitiesData.data);
-    //         });
-    //       }
-    //       allActivitiesData()
-    // }, []);
-
-      
-
       console.log(allActivitiesData, "allActivitiesData****")
 
   return (
@@ -66,9 +55,7 @@ function App() {
       <Route path='/activities' element={<Activities activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
       <Route path='/activities/:activityType' element={<SingleActivity activitiesInfo={allActivitiesData} parksInfo={allParksData}/>}/>
       <Route path='/allparks/:parkCode' element={<SingleParkDetails/>}/>
-          {/* // <Route path='/post' element={<Single/>}/>
-          // <Route path='/write' element={<Write/>}/>
-          <Route path='/favorite' element={<Favorite/>}/> */}
+      <Route path='/myparks' element={<MyParks parksInfo={allParksData}/>}/>
       </Routes>
       
     </div>
