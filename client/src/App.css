@@ -497,7 +497,7 @@ margin: 0.5%;
   /* position: relative; */
   max-width : 250px;
   height : 215px;  
-  background-color : #C9CE97;
+  background-color : #f1f6bb;
   margin : 30px 10px;
   padding : 20px 15px;
   box-shadow : 0 5px 20px rgba(0,0,0,0.5);
@@ -526,7 +526,7 @@ margin: 0.5%;
   /* left: 8px; */
   box-shadow : 0 5px 20px rgba(0,0,0,0.2);
   z-index : 1;
-  background-color:#92975D;
+  background-color:#b8bd81;
   border-radius: 10px;
 }
 .image h3 {
