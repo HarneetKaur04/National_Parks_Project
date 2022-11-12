@@ -26,8 +26,10 @@ const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}
 
   return (
     <>
+    <div className='heading'>
     <h2>{title}</h2>
     <Link to="/allparks">{seeMore}</Link>
+    </div>
     <div className='container1' >
       {displayFewParksFromAllParks.map((item, index) => 
         <div className='container' key={index} >

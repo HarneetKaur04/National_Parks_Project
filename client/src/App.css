@@ -1,5 +1,5 @@
 .App {
-  width: 90%;
+  width: 95%;
   margin-right: auto;
   margin-left: auto;
   font-family: "Lora", serif;
@@ -454,6 +454,41 @@ path:hover {
 .container2 {
   display: flex;
   flex:9;
+}
+.heading {
+  background: #dfdcc2;
+  text-align: center;
+}
+
+.heading h2 {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:30px; font-weight:300; color:#222; letter-spacing:1px;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    /* align-items: center; */
+    
+}
+
+.heading h2:after,.heading h2:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #5391B6;
+  border-top: 1px solid #5391B6;
+  height: 5px;
+background-color:#f8f8f8;
+}
+.heading button {
+background: #928C2E;
+height: 30px;
+border-radius: 14px;
+margin: 0.5%;
 }
 
 .container .card {
