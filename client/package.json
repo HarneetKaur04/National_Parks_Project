@@ -37,5 +37,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dom-testing-library": "^5.0.0",
+    "global-jsdom": "^8.6.0",
+    "jsdom": "^20.0.2"
   }
 }

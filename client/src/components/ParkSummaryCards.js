@@ -40,7 +40,6 @@ const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}
           <div className= "content">
             <p>{item.description}</p>
           </div>
-          {/* <div className= "content"><button onClick={() => handleChosenPark(item)}>Explore</button></div> */}
           <div className= "content">
             <Link to={`/allparks/${item.parkCode}`}>Explore</Link>
           </div>

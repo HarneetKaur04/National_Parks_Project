@@ -48,12 +48,6 @@ const Navbar= () =>{
               CONTACT
             </Link>
           </li>
-          {/* <li className="topListItem">
-          <i className="topIcon fab fa-facebook-square"></i>
-          <i className="topIcon fab fa-instagram-square"></i>
-          <i className="topIcon fa-brands fa-linkedin"></i>
-          <i className="topIcon fab fa-twitter-square"></i>
-          </li> */}
         </ul>
       </div>
       <div className="topRight">
