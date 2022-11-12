@@ -3,6 +3,7 @@
   margin-right: auto;
   margin-left: auto;
   font-family: "Lora", serif;
+  
 }
 
 .App_landing {
@@ -456,11 +457,12 @@ path:hover {
   flex:9;
 }
 .heading {
-  background: #dfdcc2;
+  background: #F2F4DA;
   text-align: center;
 }
 
 .heading h2 {
+  
     width: 80%;
     align-items: center;
     justify-content: center;
@@ -485,7 +487,7 @@ path:hover {
 background-color:#f8f8f8;
 }
 .heading button {
-background: #928C2E;
+background: #907B50;
 height: 30px;
 border-radius: 14px;
 margin: 0.5%;
@@ -495,7 +497,7 @@ margin: 0.5%;
   /* position: relative; */
   max-width : 250px;
   height : 215px;  
-  background-color : #fff;
+  background-color : #C9CE97;
   margin : 30px 10px;
   padding : 20px 15px;
   box-shadow : 0 5px 20px rgba(0,0,0,0.5);
@@ -524,6 +526,11 @@ margin: 0.5%;
   /* left: 8px; */
   box-shadow : 0 5px 20px rgba(0,0,0,0.2);
   z-index : 1;
+  background-color:#92975D;
+  border-radius: 10px;
+}
+.image h3 {
+  margin-left: 5px;
 }
 
  .image img {
@@ -533,7 +540,7 @@ margin: 0.5%;
   object-fit: cover;
 }
 
-.container .card .content {
+.container .card .content{
   position : relative;
   top : -160px;
   padding : 10px 15px;
@@ -544,17 +551,29 @@ margin: 0.5%;
   transition : 0.3s ease-in-out;
   overflow: hidden;
    display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-    
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;   
 }
-
+button {
+  margin-left: 6px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    background: white;
+}
+.content a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #907B50;
+  border-radius: 5px;
+  padding: 3px;
+}
 .container .card:hover .content {
    margin-top : 30px;
    visibility : visible;
    opacity : 1;
    transition-delay: 0.2s;
-  
 }
 
 .card_img {
@@ -640,14 +659,8 @@ margin: 0.5%;
   cursor: pointer;
 }
 
-.fa-sharp.fa-solid.fa-heart{
-  color: red;
-
-}
-
 .fa-sharp.fa-solid.fa-heart-crack {
   color: blue;
-
 }
 
 .user_profile {

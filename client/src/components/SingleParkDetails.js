@@ -42,7 +42,6 @@ const SingleParkDetails = () => {
           <h1 className="singlePostTitle">
           {park.fullName}
           </h1>
-          {/* <i className="singlePostIcon far fa-trash-alt" onClick={()=> handleDelete(editBlogFields.blog_id)}></i> */}
         </div> 
       </div>
       <div className='singleParkPost'>
