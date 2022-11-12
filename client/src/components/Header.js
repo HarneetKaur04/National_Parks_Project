@@ -25,7 +25,7 @@ const Header = ({parksInfo}) => {
       
       <div className="map">
         
-        <USAMap  onClick={mapHandler} />
+        <USAMap data-testid="content-input3" onClick={mapHandler} />
         <span className='headerStateSelect'>{!stateSelected? "Select a State" : (<p>You Selected:<p><Link to="/allparks" state={{ data: stateSelected }}>{stateSelected}</Link></p></p>)}</span>
 
       </div>
