@@ -7,7 +7,9 @@ const ExplorePics = ({parksInfo}) => {
 
   return (
     <>
-      <h2>#GetInspired</h2>
+      <div className='heading'>
+      <h2>#GetInspired</h2><br/>
+      </div>
       <div className='posts' >
       {display_few_pics_of_parks.map((item, index)=> 
         <div className= "post" key={index}>

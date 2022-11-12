@@ -226,6 +226,7 @@ path:hover {
   flex-wrap: wrap;
   margin: 10px;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .sidebar {
