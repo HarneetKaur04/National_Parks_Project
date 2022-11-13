@@ -14,7 +14,7 @@ const ExplorePics = ({parksInfo}) => {
       {display_few_pics_of_parks.map((item, index)=> 
         <div className= "post" key={index}>
             <img className= "postImg" src ={item.images[0].url} alt={item.images[0].altText}/>
-            <p className="img__description">{item.images[0].title}</p>
+            <span className="img__description">{item.images[0].title}</span>
          
         </div>
       )}
