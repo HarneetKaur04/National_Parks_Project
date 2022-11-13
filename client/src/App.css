@@ -761,19 +761,24 @@ transition: color .3s ease-in-out,
     background-image: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80");
     
   }
-.video_space {
+.video_space, .video_space2{
     flex: 1;
     padding: 1em;
     text-align: center;
     margin: auto auto;
   }
+.video_space2 {
+  background: white;
+  margin-right:4%;
+  border-radius: 5px;
+}
 
 .video_heading{
-    color: yellow;
-    font-size:40px;
+    color: black;
+    font-size:60px;
   }
 .video_paragraph {
-  color: white;
+  color: black;
   font-size: 20px;
 }
 
