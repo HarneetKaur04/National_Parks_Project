@@ -9,14 +9,14 @@ import Form from '../components/form'
 const Home = ({parksInfo, activitiesInfo}) => {
   console.log(activitiesInfo, "activitiesInfo Home")
 
-  let fewActivities = activitiesInfo.slice(0, 6)
+  let fewActivities = activitiesInfo.slice(0, 8)
 
   return (
     <>
         <Header/>
         <ParkSummaryCards parksInfo={parksInfo} num={15} title={"Explore"} seeMore={<button>See More</button>}/>
         <Form />
-        <ThingsToDo activitiesInfo={fewActivities} num= {6} seeMore={<button>See More</button>}/>
+        <ThingsToDo activitiesInfo={fewActivities} num= {4} seeMore={<button>See More</button>}/>
         <ParkVideo/>
         <ExplorePics parksInfo={parksInfo}/>
     </>
