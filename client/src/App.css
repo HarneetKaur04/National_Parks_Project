@@ -226,7 +226,6 @@ path:hover {
   flex-wrap: wrap;
   margin: 10px;
   justify-content: center;
-  margin-top: 30px;
 }
 
 .sidebar {
@@ -624,12 +623,13 @@ button {
 
 .post {
   margin: .5px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
   background-color:white;
   position: relative;
   overflow: hidden;
+  margin-top: 40px;
 }
 
 .postImg {
@@ -778,6 +778,10 @@ button {
   border: none;
   color: white;
   font-size: 20px;
+  font-weight: lighter;
+}
+#add-user-name, #add-user-email{
+  width:50%;
 }
 .formSide h3 {
   text-align: center;

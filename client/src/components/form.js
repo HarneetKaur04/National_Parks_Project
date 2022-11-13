@@ -54,7 +54,7 @@ const Form = () => {
             required
             value={form.firstname}
             onChange={handleNameChange}
-          /><br/>
+          /><br/><br/>
           <label>Email</label><br/>
           <input
             type="text"
