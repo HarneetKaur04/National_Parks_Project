@@ -487,10 +487,12 @@ path:hover {
 background-color:#f8f8f8;
 }
 .heading button {
-background: #907B50;
+background: #8d6619;
 height: 30px;
 border-radius: 14px;
 margin: 0.5%;
+font-weight: bold;
+font-size: 18px;
 }
 
 .container .card {
@@ -556,9 +558,10 @@ margin: 0.5%;
 }
 button {
   margin-left: 6px;
-    margin-bottom: 4px;
-    border-radius: 8px;
-    background: white;
+  margin-bottom: 4px;
+  border-radius: 8px;
+  background: white;
+
 }
 .content a {
   color: white;
@@ -584,8 +587,20 @@ button {
   margin: 3%;
   cursor: pointer;
   position: relative;
+}
+.card_img:nth-child(4n-3){
   background-color: #be9656;
 }
+.card_img:nth-child(4n-2){
+  background-color: #72be56;
+}
+.card_img:nth-child(4n-1){
+  background-color: #5669be;
+}
+.card_img:nth-child(4n){
+  background-color: #56a9be;
+}
+
 .card_imgPark{
   width: 120px;
   height: 120px;
@@ -610,6 +625,10 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.card_img a{
+text-decoration: none;
 }
 
 
