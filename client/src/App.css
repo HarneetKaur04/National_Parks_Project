@@ -2,8 +2,7 @@
   width: 95%;
   margin-right: auto;
   margin-left: auto;
-  font-family: "Lora", serif;
-  
+  font-family: 'Red Hat Text', sans-serif;
 }
 
 .App_landing {
@@ -313,7 +312,6 @@ path:hover {
   text-align: center;
   margin: 10px;
   font-size: 28px;
-  font-family: "Lora", sans-serif;
 }
 
 .singlePostEdit {
@@ -367,8 +365,7 @@ path:hover {
   display: flex;
   justify-content: space-between;
   font-size: 16px;
-  color: #be9656;
-  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  color: #be9656; 
 }
 
 .singlePostAuthor{
@@ -506,7 +503,7 @@ transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   /* position: relative; */
   max-width : 250px;
   height : 220px;  
-  background-color : #f1f6bb;
+  background-color : #4f5d3e;
   margin : 30px 10px;
   padding : 20px 15px;
   box-shadow : 0 5px 20px rgba(0,0,0,0.5);
@@ -534,7 +531,7 @@ transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   top : -40%;
   box-shadow : 0 5px 20px rgba(0,0,0,0.2);
   z-index : 1;
-  background-color:#b8bd81;
+  background-color:#faf7e8;
   border-radius: 10px;
 }
 .image h3 {
@@ -700,8 +697,8 @@ box-shadow: inset 100px 0 0 0 #54b3d6;
   color: rgb(224, 19, 19);
   font-size: large;
 }
-.fa-solid.fa-heart-crack {
-  color: blue;
+.fa-regular.fa-heart {
+  color: rgb(224, 19, 19);
   font-size: large;
 }
 
