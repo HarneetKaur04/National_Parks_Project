@@ -487,18 +487,25 @@ path:hover {
 background-color:#f8f8f8;
 }
 .heading button {
-background: #8d6619;
+background: #e4c17a;
 height: 30px;
 border-radius: 14px;
 margin: 0.5%;
 font-weight: bold;
 font-size: 18px;
+box-shadow: inset 0 0 0 0 #275d23;
+transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
+
+.heading button:hover {
+  box-shadow: inset 100px 0 0 0 #1d4d15;
+    color: white;
+  }
 
 .container .card {
   /* position: relative; */
   max-width : 250px;
-  height : 215px;  
+  height : 220px;  
   background-color : #f1f6bb;
   margin : 30px 10px;
   padding : 20px 15px;
@@ -525,7 +532,6 @@ font-size: 18px;
   position : relative;
   width : 100%;
   top : -40%;
-  /* left: 8px; */
   box-shadow : 0 5px 20px rgba(0,0,0,0.2);
   z-index : 1;
   background-color:#b8bd81;
@@ -533,6 +539,7 @@ font-size: 18px;
 }
 .image h3 {
   margin-left: 5px;
+  height: 45px;
 }
 
  .image img {
@@ -559,10 +566,11 @@ font-size: 18px;
 button {
   margin-left: 6px;
   margin-bottom: 4px;
-  border-radius: 8px;
-  background: white;
-
+  /* border-radius: 8px; */
+  border: none;
+  background:none;
 }
+
 .content a {
   color: white;
   text-decoration: none;
@@ -632,8 +640,14 @@ button {
 .card_img a{
 text-decoration: none;
 align-items: center;
+color: black;
+box-shadow: inset 0 0 0 0 #54b3d6;
+transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
-
+.card_img a:hover {
+box-shadow: inset 100px 0 0 0 #54b3d6;
+  color: white;
+}
 
 .card_img:hover {
   width: 150px;
@@ -682,8 +696,13 @@ align-items: center;
   cursor: pointer;
 }
 
-.fa-sharp.fa-solid.fa-heart-crack {
+.fa-solid.fa-heart {
+  color: rgb(224, 19, 19);
+  font-size: large;
+}
+.fa-solid.fa-heart-crack {
   color: blue;
+  font-size: large;
 }
 
 .user_profile {
@@ -745,7 +764,6 @@ align-items: center;
 
 .full_container {
     display: flex;
-    height: 100%;
     height: 600px;
     flex-wrap: wrap;
     overflow: hidden;

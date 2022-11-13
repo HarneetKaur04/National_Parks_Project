@@ -50,8 +50,9 @@ const ToggleFavorite = ({selectedPark}) => {
         // console.log(fav, "info after request")
   return (
     <div>
-        <button data-testId="buttonFav" onClick={()=> handleClick()}>{user? (!fav.find(item=> item.park_code == selectedPark.parkCode)? <i className="fa-solid fa-heart">Add</i> : <i className="fa-sharp fa-solid fa-heart-crack">UnSave</i>): <i className="fa-sharp fa-solid fa-heart-crack" onClick={() => loginWithRedirect()}></i>}
+        <button data-testId="buttonFav" onClick={()=> handleClick()}>{user? (!fav.find(item=> item.park_code == selectedPark.parkCode)? <i className="fa-solid fa-heart"></i> : <i className="fa-sharp fa-solid fa-heart-crack"></i>): <i className="fa-sharp fa-solid fa-heart-crack" onClick={() => loginWithRedirect()}></i>}
         </button>
+       
         
     </div>
   )

@@ -44,6 +44,7 @@ console.log(selectedState, "check******")
       <div className='container2'>
       {selectedState? <ParkSummaryCards singleStateParksInfo={selectedState} parksInfo={parksInfo} num={1} title={`List of ${selectedState} National Parks`} />: <ParkSummaryCards parksInfo={parksInfo} num={1} title={"List of all National Parks"} />}
       </div>
+      
     </div>
   )
 }

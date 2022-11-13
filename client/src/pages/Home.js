@@ -6,8 +6,6 @@ import ParkVideo from '../components/ParkVideo'
 import ThingsToDo from '../components/ThingsToDo'
 import Form from '../components/form'
 
-
-
 const Home = ({parksInfo, activitiesInfo}) => {
   console.log(activitiesInfo, "activitiesInfo Home")
 

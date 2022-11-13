@@ -37,7 +37,7 @@ const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}
           <div className= "image">
             <img src ={item.images[0].url} alt={item.images[0].altText}/>
             <h3>{item.fullName}</h3>
-            {user? <ToggleFavorite selectedPark={item}/> : <button onClick={() => loginWithRedirect()}><i className="fa-solid fa-heart"><strong>ADD</strong></i></button>}
+            {user? <ToggleFavorite selectedPark={item}/> : <button onClick={() => loginWithRedirect()}><i className="fa-solid fa-heart"></i></button>}
           </div>
           <div className= "content">
             {item.description}

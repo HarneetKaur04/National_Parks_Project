@@ -20,9 +20,10 @@ const Header = ({parksInfo}) => {
       alt="mountains"
     />
      <div className="headerTitles">
+
       <div className="headerTitleLg">The Great Outdoors</div>
       <div className="headerTitleSml">EXPLORE ~ AWAKEN ~ DISCOVER</div>
-      
+     
       <div className="map">
         
         <USAMap data-testid="content-input3" onClick={mapHandler} />
