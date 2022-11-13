@@ -622,13 +622,16 @@ button {
 
 .card_img h3 {
   position: absolute;
+  text-align: center;
   top: 50%;
   left: 50%;
+  margin: auto auto;
   transform: translate(-50%, -50%);
 }
 
 .card_img a{
 text-decoration: none;
+align-items: center;
 }
 
 
