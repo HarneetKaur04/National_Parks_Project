@@ -586,6 +586,13 @@ button {
   cursor: pointer;
 }
 
+.button_submit {
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+
 .content a {
   color: #050404;
   text-decoration: none;

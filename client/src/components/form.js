@@ -65,7 +65,7 @@ const Form = () => {
             value={form.email}
             onChange={handleEmailChange}
           /><br/><br/>
-          <button type="submit">Submit</button>
+          <button className= "button_submit" type="submit">Submit</button>
         </h4>
       {submitted? (<p>Registered Successfully!</p>): null}
       </form>
