@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { Component, useState } from 'react'
 import USAMap from "react-usa-map";
 import { Link } from 'react-router-dom'
 
@@ -15,7 +15,7 @@ const Header = ({parksInfo}) => {
     <div className="header">
     <img
       className="headerImg"
-      src="https://img5.goodfon.com/wallpaper/nbig/1/da/ray-bilcliff-by-ray-bilcliff-beautiful-dawn-evening-landscap.jpg"
+      src="https://store-images.s-microsoft.com/image/apps.21435.14012602786650760.c983ead2-6f07-48e2-8383-1e3f9958d48e.a552b600-c88f-4488-8523-35a8c79ec837"
       alt="mountains"
     />
      <div className="headerTitles">
