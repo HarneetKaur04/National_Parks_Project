@@ -26,8 +26,10 @@ const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}
 
   return (
     <>
+    <div className='heading'>
     <h2>{title}</h2>
     <Link to="/allparks">{seeMore}</Link>
+    </div>
     <div className='container1' >
       {displayFewParksFromAllParks.map((item, index) => 
         <div className='container' key={index} >
@@ -35,12 +37,13 @@ const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}
           <div className= "image">
             <img src ={item.images[0].url} alt={item.images[0].altText}/>
             <h3>{item.fullName}</h3>
-            {user? <ToggleFavorite selectedPark={item}/> : <button onClick={() => loginWithRedirect()}>Add</button>}
+            {user? <ToggleFavorite selectedPark={item}/> : <button onClick={() => loginWithRedirect()}><i className="fa-regular fa-heart"></i></button>}
+          
           </div>
           <div className= "content">
-            <p>{item.description}</p>
-          </div>
-          <div className= "content">
+            {item.description}
+            </div>
+          <div className= "content" style={{margin: 0}}>
             <Link to={`/allparks/${item.parkCode}`}>Explore</Link>
           </div>
         </div>    

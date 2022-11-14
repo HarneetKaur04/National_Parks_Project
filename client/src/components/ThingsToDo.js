@@ -7,8 +7,10 @@ console.log(activitiesInfo, "activitiesInfo****")
 
   return (
     <>
+    <div className='heading'>
     <h2>Things to Do</h2>
     <Link to="/activities">{seeMore}</Link>
+    </div>
     <div className='posts' >
     {activitiesInfo.map((item,index) => (
         <div className="card_img" key={index}>

@@ -1,6 +1,5 @@
 import React, { Component, useState } from 'react'
 import USAMap from "react-usa-map";
-import ParkSummaryCards from './ParkSummaryCards';
 import { Link } from 'react-router-dom'
 
 const Header = ({parksInfo}) => {
@@ -16,13 +15,14 @@ const Header = ({parksInfo}) => {
     <div className="header">
     <img
       className="headerImg"
-      src="https://img5.goodfon.com/wallpaper/nbig/1/da/ray-bilcliff-by-ray-bilcliff-beautiful-dawn-evening-landscap.jpg"
+      src="https://store-images.s-microsoft.com/image/apps.21435.14012602786650760.c983ead2-6f07-48e2-8383-1e3f9958d48e.a552b600-c88f-4488-8523-35a8c79ec837"
       alt="mountains"
     />
      <div className="headerTitles">
+
       <div className="headerTitleLg">The Great Outdoors</div>
       <div className="headerTitleSml">EXPLORE ~ AWAKEN ~ DISCOVER</div>
-      
+     
       <div className="map">
         
         <USAMap data-testid="content-input3" onClick={mapHandler} />

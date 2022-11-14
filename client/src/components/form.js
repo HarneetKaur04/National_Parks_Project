@@ -22,7 +22,7 @@ const Form = () => {
   //A function to handle the post request
   const postSubscriber = async(form) => {
     console.log(form, "fields in form")
-    await fetch("http://localhost:5000/newsletterSubscriber", {
+    await fetch("/newsletterSubscriber", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
@@ -54,7 +54,7 @@ const Form = () => {
             required
             value={form.firstname}
             onChange={handleNameChange}
-          /><br/>
+          /><br/><br/>
           <label>Email</label><br/>
           <input
             type="text"
@@ -65,7 +65,7 @@ const Form = () => {
             value={form.email}
             onChange={handleEmailChange}
           /><br/><br/>
-          <button type="submit">Submit</button>
+          <button className= "button_submit" type="submit">Submit</button>
         </h4>
       {submitted? (<p>Registered Successfully!</p>): null}
       </form>

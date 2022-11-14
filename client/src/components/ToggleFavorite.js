@@ -9,7 +9,7 @@ const ToggleFavorite = ({selectedPark}) => {
 
     useEffect(() => {
     const displayFav = async() => {
-        await fetch(`http://localhost:5000/favorites/${user.sub}`, {
+        await fetch(`/favorites/${user.sub}`, {
     })
         .then(response => response.json() )
         .then(data => {
@@ -22,7 +22,7 @@ const ToggleFavorite = ({selectedPark}) => {
         // console.log(user.sub, "check user Details")
         if (!fav.find(item=> item.park_code == selectedPark.parkCode)){
             
-            await fetch(`http://localhost:5000/favorites`, {
+            await fetch(`/favorites`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({"park": selectedPark.parkCode, "user": user.sub})
@@ -34,7 +34,7 @@ const ToggleFavorite = ({selectedPark}) => {
             setIsSaved(true)
         })
     } else {
-            await fetch(`http://localhost:5000/favorites/${user.sub}/${selectedPark.parkCode}`, {
+            await fetch(`/favorites/${user.sub}/${selectedPark.parkCode}`, {
         method: "DELETE",
         })
         .then(response => response.json())
@@ -50,8 +50,9 @@ const ToggleFavorite = ({selectedPark}) => {
         // console.log(fav, "info after request")
   return (
     <div>
-        <button data-testId="buttonFav" onClick={()=> handleClick()}>{user? (!fav.find(item=> item.park_code == selectedPark.parkCode)? <i className="fa-solid fa-heart">Add</i> : <i className="fa-sharp fa-solid fa-heart-crack">UnSave</i>): <i className="fa-sharp fa-solid fa-heart-crack" onClick={() => loginWithRedirect()}></i>}
+        <button data-testId="buttonFav" onClick={()=> handleClick()}>{user? (!fav.find(item=> item.park_code == selectedPark.parkCode)? <i className="fa-regular fa-heart"></i> : <i className="fa-solid fa-heart"></i>): <i className="fa-regular fa-heart">onClick={() => loginWithRedirect()}</i>}
         </button>
+       
         
     </div>
   )

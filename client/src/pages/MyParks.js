@@ -15,7 +15,7 @@ const MyParks = ({parksInfo}) => {
         } else {
             setUserValid(true)
         let userSub = user.sub
-        await fetch(`http://localhost:5000/favorites/${userSub}`)
+        await fetch(`/favorites/${userSub}`)
         .then(response => response.json() )
         .then(display => {
             setFavParks(display);
@@ -40,7 +40,7 @@ useEffect(()=> {
 
   return (
     <div>
-        {userValid? <ParkSummaryCards parksInfo={moreDataOfSamePark} num ={1}/> : (<p><span>
+        {userValid? <ParkSummaryCards parksInfo={moreDataOfSamePark} num ={1} title ={"My Favorites"}/>: (<p><span>
             <button onClick={() => loginWithRedirect()}>Please login to save your favorites!</button>
                 </span></p>)}
         {/* {favParks ? (moreDataOfSamePark.map(item=> (
