@@ -61,7 +61,7 @@ const Navbar= () =>{
               alt="happy panda facing front"
             />
           </Link>
-          <span>Hello {user.name}</span></>) }
+          <span className='welcomeMessage'>Hello {user.name}</span></>) }
      
       </div>
       <div className="nav-container mb-3">

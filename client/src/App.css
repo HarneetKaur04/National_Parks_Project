@@ -12,6 +12,20 @@
 .link {
   text-decoration: none;
   color: inherit;
+  font-size: 20px;
+  font-weight: bold;
+}
+.welcomeMessage{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-nav.ml-auto {
+  background-color: white;
+}
+.btn.btn-danger.btn-block {
+font-size: 20px;
+font-weight: bold;
 }
 .landing_start{
   position: relative;
@@ -43,11 +57,14 @@
 
 .top {
   width: 100%;
-  background-color: white;
+  background-color: #074787;
   position: relative;
-  top: 0;
+  margin-top: 10px;
   display: flex;
   align-items: center;
+  border-radius: 10px;
+  height: 100px;
+  color: white;
 }
 
 .topLeft {
@@ -91,12 +108,13 @@
 }
 
 .topImgLeft {
-  width: 180px;
-  height: 50px;
+  width: 200px;
+  height: 80px;
   object-fit: cover;
   cursor: pointer;
   display: flex;
   text-align: left;
+  border-radius: 10px;
 }
 
 .topImgRight{
@@ -116,7 +134,7 @@
 
 .header {
   position: relative;
-  margin-top: 60px;
+  margin-top: none;
   display: flex;
   justify-content: center;
 }
@@ -154,7 +172,7 @@
   width: 100%;
   display: flex;
   height: 30%;
-  margin-top: 80px;
+  margin-top: 20px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -181,6 +199,16 @@ path {
 path:hover {
   fill: #928C2E;
   cursor: pointer;
+}
+
+.filter_button {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #016381;
+  color: white;
+  border-radius: 6px;
 }
 
 .post {
@@ -240,7 +268,6 @@ path:hover {
 
 .singleParkPost {
   display: flex;
-  border: solid red;
 }
 
 .parkPost {
@@ -248,37 +275,46 @@ path:hover {
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
-  border: solid #063b9d;
+  background-color: #e4f5f4;
+  
+}
+h4 {
+  font-size: 20px;
 }
 
 
 .sidebarPark {
   flex: 3;
-  height: fit-content;
-  padding-bottom: 30px;
-  background-color: #fdfbfb;
+  padding: 30px;
+  background-color: #b4d5effc;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   margin: 20px;
-  border: solid #063b9d;
 }
-
 
 .sidebarTop{
   text-align: center;
+  font-size: 25px;
 }
 .sidebar h4{
   margin: 4%;
+  font-size: 20px;
+ 
 }
 .sidebarTop p{
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+.info_Park {
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 .postTitle {
-  font-size: 30px;
+  font-size: 35px;
   width: 100%;
-  margin-top: 15px;
+  margin: 15px;
   text-align: center;
 }
 .postTitle p{
@@ -303,17 +339,16 @@ path:hover {
 
 .singlePostImg {
   width: 100%;
-  height: 300px;
-  border-radius: 5px;
+  height: 350px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
-.singlePostTitle {
+.singlePostTitle{
   text-align: center;
   margin: 10px;
-  font-size: 28px;
+  font-size: 40px;
 }
-
 .singlePostEdit {
   float: right;
   font-size: 16px;
@@ -336,15 +371,6 @@ path:hover {
   /* background-color: currentColor; */
 }
 
-/* .singlePostIcon.fa-regular.fa-heart::before,
-.singlePostIcon.fa-regular.fa-heart::after {
-  content: "";
-  background-color: currentColor;
-  border-radius: 50%;
-  height: 50px;
-  position: absolute;
-  width: 50px;
-} */
 
 .singlePostIcon.fa-regular.fa-heart:before {
   top: -25px;
@@ -624,7 +650,7 @@ button {
   position: relative;
 }
 .card_img:nth-child(even){
-  background-color: #016381;
+  background-color: #a1e0f3;
 }
 
 .card_img:nth-child(odd){
@@ -639,8 +665,12 @@ button {
   margin: 3%;
   cursor: pointer;
   position: relative;
-  background-color: orange;
+  background-color: #b4d5effc;
   font-size: medium;
+  align-items: center;
+}
+.card_imgPark:nth-child(even){
+  background-color: #a1e0f3;
 }
 
 .card_imgPark h3 {
@@ -838,7 +868,7 @@ font-size: 20px;
 
 .formSide{
   flex:2;
-  background: rgb(170, 134, 108);
+  background: rgb(226, 202 ,176,1);
   height: 300px;
   margin: 0.50%;
   border-radius: 12px;
@@ -848,7 +878,7 @@ font-size: 20px;
   flex:4;
   height: 400px;
   text-align: center;
-  background: #223843;
+  background: #074787;
   border-radius: 12px;
   color: white;
   font-size: 30px;

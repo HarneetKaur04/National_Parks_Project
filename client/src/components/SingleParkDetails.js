@@ -47,21 +47,20 @@ const SingleParkDetails = () => {
       <div className='singleParkPost'>
         <div className="sidebarPark">
           <h4 className='sidebarTop'>Operating Hours
-            <p>
-              
+            <p> 
             {Object.entries(park.operatingHours[0].standardHours)}
             </p>
           </h4>
-          <h4>Fees: {park.entranceFees[0].cost} $ <p>{park.entranceFees[0].description}</p></h4>
+          <h4>Fees: <span className="info_Park" >{park.entranceFees[0].cost} $ <p className='info_Park'>{park.entranceFees[0].description}</p></span></h4>
           <h4>Alerts:</h4>
-          <h4>{park.directionsInfo} <a href={park.directionsUrl}>Directions</a></h4>
+          <span className="info_Park" >{park.directionsInfo} <a href={park.directionsUrl}>Directions</a></span>
 
         </div>
         <div className="parkPost">
-          <h2 className='postTitle'>About
+          <h2 className='postTitle'>ABOUT
             <p>{park.description}</p>
           </h2>
-          <h2 className='postTitle'>Things to Do
+          <h2 className='postTitle'>THINGS TO DO
             <div className='posts' >
       {park.activities.slice(0,8).map((item,index) => (
               <div className="card_imgPark" key={index}>
