@@ -22,7 +22,7 @@ const Form = () => {
   //A function to handle the post request
   const postSubscriber = async(form) => {
     console.log(form, "fields in form")
-    await fetch("http://localhost:5000/newsletterSubscriber", {
+    await fetch("/newsletterSubscriber", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),

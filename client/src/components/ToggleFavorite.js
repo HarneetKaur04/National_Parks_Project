@@ -9,7 +9,7 @@ const ToggleFavorite = ({selectedPark}) => {
 
     useEffect(() => {
     const displayFav = async() => {
-        await fetch(`http://localhost:5000/favorites/${user.sub}`, {
+        await fetch(`/favorites/${user.sub}`, {
     })
         .then(response => response.json() )
         .then(data => {
@@ -22,7 +22,7 @@ const ToggleFavorite = ({selectedPark}) => {
         // console.log(user.sub, "check user Details")
         if (!fav.find(item=> item.park_code == selectedPark.parkCode)){
             
-            await fetch(`http://localhost:5000/favorites`, {
+            await fetch(`/favorites`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({"park": selectedPark.parkCode, "user": user.sub})
@@ -34,7 +34,7 @@ const ToggleFavorite = ({selectedPark}) => {
             setIsSaved(true)
         })
     } else {
-            await fetch(`http://localhost:5000/favorites/${user.sub}/${selectedPark.parkCode}`, {
+            await fetch(`/favorites/${user.sub}/${selectedPark.parkCode}`, {
         method: "DELETE",
         })
         .then(response => response.json())

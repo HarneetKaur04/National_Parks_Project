@@ -1,6 +1,5 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import USAMap from "react-usa-map";
-import ParkSummaryCards from './ParkSummaryCards';
 import { Link } from 'react-router-dom'
 
 const Header = ({parksInfo}) => {
