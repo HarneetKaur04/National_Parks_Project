@@ -33,7 +33,7 @@ console.log(selectedState, "check******")
   return (
     <div>
       <div className="dropdown">
-      <button onClick={handleOpen}>Filter Using States</button>
+      <button className="filter_button" onClick={handleOpen}>Filter Using States</button>
       {open ? (
         <ul className="menu">
           {uniqueStates.map(state => 

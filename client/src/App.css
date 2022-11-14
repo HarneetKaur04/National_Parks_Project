@@ -201,6 +201,16 @@ path:hover {
   cursor: pointer;
 }
 
+.filter_button {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #016381;
+  color: white;
+  border-radius: 6px;
+}
+
 .post {
   width: 250px;
   height: fit-content;
@@ -258,7 +268,6 @@ path:hover {
 
 .singleParkPost {
   display: flex;
-  border: solid red;
 }
 
 .parkPost {
@@ -266,37 +275,46 @@ path:hover {
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
-  border: solid #063b9d;
+  background-color: #e4f5f4;
+  
+}
+h4 {
+  font-size: 20px;
 }
 
 
 .sidebarPark {
   flex: 3;
-  height: fit-content;
-  padding-bottom: 30px;
-  background-color: #fdfbfb;
+  padding: 30px;
+  background-color: #b4d5effc;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   margin: 20px;
-  border: solid #063b9d;
 }
-
 
 .sidebarTop{
   text-align: center;
+  font-size: 25px;
 }
 .sidebar h4{
   margin: 4%;
+  font-size: 20px;
+ 
 }
 .sidebarTop p{
-  font-size: 12px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+.info_Park {
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 .postTitle {
-  font-size: 30px;
+  font-size: 35px;
   width: 100%;
-  margin-top: 15px;
+  margin: 15px;
   text-align: center;
 }
 .postTitle p{
@@ -321,17 +339,16 @@ path:hover {
 
 .singlePostImg {
   width: 100%;
-  height: 300px;
-  border-radius: 5px;
+  height: 350px;
+  border-radius: 10px;
   object-fit: cover;
 }
 
-.singlePostTitle {
+.singlePostTitle{
   text-align: center;
   margin: 10px;
-  font-size: 28px;
+  font-size: 40px;
 }
-
 .singlePostEdit {
   float: right;
   font-size: 16px;
@@ -354,15 +371,6 @@ path:hover {
   /* background-color: currentColor; */
 }
 
-/* .singlePostIcon.fa-regular.fa-heart::before,
-.singlePostIcon.fa-regular.fa-heart::after {
-  content: "";
-  background-color: currentColor;
-  border-radius: 50%;
-  height: 50px;
-  position: absolute;
-  width: 50px;
-} */
 
 .singlePostIcon.fa-regular.fa-heart:before {
   top: -25px;
@@ -642,7 +650,7 @@ button {
   position: relative;
 }
 .card_img:nth-child(even){
-  background-color: #016381;
+  background-color: #a1e0f3;
 }
 
 .card_img:nth-child(odd){
@@ -657,8 +665,12 @@ button {
   margin: 3%;
   cursor: pointer;
   position: relative;
-  background-color: orange;
+  background-color: #b4d5effc;
   font-size: medium;
+  align-items: center;
+}
+.card_imgPark:nth-child(even){
+  background-color: #a1e0f3;
 }
 
 .card_imgPark h3 {
