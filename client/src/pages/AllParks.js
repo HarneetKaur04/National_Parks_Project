@@ -23,7 +23,7 @@ const AllParks = ({parksInfo}) => {
 
   const handleSearch = async(event) => {
     setsearch(true)
-    
+    setSelectedState(false)
     let value = event.target.value;
     console.log(value, "event")
     let result = [];
@@ -68,13 +68,9 @@ console.log(selectedState, "check******")
           <button type="submit" className="searchButton">
           <i className="fa-solid fa-magnifying-glass"></i>
           </button>
-        </div>
-      <div 
-      className='container2'> 
-      <br/>
-      {search? "Your Search Results:" : null}
-      {search?  (<div className='container1' >
-   
+      </div>
+
+      {selectedState? <ParkSummaryCards singleStateParksInfo={selectedState} parksInfo={parksInfo} num={1} title={`${selectedState} National Parks`} />: search ?  (<div className='container1' >
       <br/>
       {filteredData.map((item, index) => 
         <div className='container' key={index} >
@@ -95,13 +91,8 @@ console.log(selectedState, "check******")
         </div>    
       </div>)}
       </div>
-      ): 
-      <ParkSummaryCards parksInfo={parksInfo} num={1} title={"All National Parks"} />}
-      </div>
+      ): <ParkSummaryCards parksInfo={parksInfo} num={1} title={"All National Parks"} />}
 
-      {selectedState? <ParkSummaryCards singleStateParksInfo={selectedState} parksInfo={parksInfo} num={1} title={`${selectedState} National Parks`} />: <ParkSummaryCards parksInfo={parksInfo} num={1} title={"All National Parks"} />}
-      
-      
     </div>
   )
 }
