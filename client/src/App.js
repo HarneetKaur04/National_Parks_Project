@@ -23,7 +23,7 @@ function App() {
 
  
     const handleAllParksData = async () => {
-      fetch("http://localhost:5000/parks")
+      fetch("/parks")
         .then((response) => response.json())
         .then((parksData) => {
             setAllParksData(parksData.data);
@@ -31,7 +31,7 @@ function App() {
           };
           
     const handleAllActivitiesData = async () => {
-            fetch("http://localhost:5000/activities")
+            fetch("/activities")
               .then((response) => response.json())
               .then((activitiesData) => {
                 setAllActivitiesData(activitiesData.data);
@@ -47,9 +47,9 @@ function App() {
 
   return (
     <>
-    {/* <Routes>
+    <Routes>
         <Route path="/" element={<Landing />} />
-    </Routes> */}
+    </Routes>
     <div className="App">
       <NavBar/>
       <Routes>
