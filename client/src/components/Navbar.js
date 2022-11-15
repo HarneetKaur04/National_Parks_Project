@@ -51,9 +51,7 @@ const Navbar= () =>{
         </ul>
       </div>
       <div className="topRight">
-        
-          
-          
+  
       {!user ? null : (<><Link className="link" to="/me">
             <img
               className="topImgRight"
@@ -61,14 +59,15 @@ const Navbar= () =>{
               alt="happy panda facing front"
             />
           </Link>
-          <span className='welcomeMessage'>Hello {user.name}</span></>) }
+          <span>Hello {user.name}</span></>) }
      
       </div>
       <div className="nav-container mb-3">
       <nav className="navbar navbar-expand-md navbar-light bg-light">
         <div className="container">
-          <div className="navbar-brand logo" />
+          <div className="navbar-brand logo" >
           <AuthNav />
+        </div>
         </div>
       </nav>
     </div>
