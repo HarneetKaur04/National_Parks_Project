@@ -917,15 +917,18 @@ text-decoration: wavy;
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
   .search {
-    width: 100%;
+    width: 80%;
     position: relative;
     display: flex;
+    text-align: center;
+    margin: auto auto;
   }
   
   .searchTerm {
     width: 100%;
-    border: 3px solid #00B4CC;
+    border: 3px solid #016381;
     border-right: none;
+    font-weight: bold;
     padding: 5px;
     height: 20px;
     border-radius: 5px 0 0 5px;
@@ -934,14 +937,14 @@ text-decoration: wavy;
   }
   
   .searchTerm:focus{
-    color: #00B4CC;
+    color: #016381;
   }
   
   .searchButton {
     width: 40px;
     height: 36px;
-    border: 1px solid #00B4CC;
-    background: #00B4CC;
+    border: 1px solid #016381;
+    background: #016381;
     text-align: center;
     color: #fff;
     border-radius: 0 5px 5px 0;

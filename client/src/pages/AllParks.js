@@ -62,14 +62,20 @@ console.log(selectedState, "check******")
           )} 
         </ul>): null}
       </div>
+      <br/>
       <div className="search">
           <input type="text" className="searchTerm" placeholder="Which park are you looking for?" onChange={(handleSearch)}/>
           <button type="submit" className="searchButton">
           <i className="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
-      <div className='container2'>
-      {search?  (<div className='container1' >Your Search Results:
+      <div 
+      className='container2'> 
+      <br/>
+      {search? "Your Search Results:" : null}
+      {search?  (<div className='container1' >
+   
+      <br/>
       {filteredData.map((item, index) => 
         <div className='container' key={index} >
         <div className= "card">
