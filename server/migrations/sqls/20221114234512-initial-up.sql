@@ -1,6 +1,6 @@
 /* Replace with your SQL commands */
 
-CREATE TABLE public.users (
+CREATE TABLE users (
     id integer NOT NULL,
     lastname character varying(255),
     firstname character varying(255),
@@ -8,12 +8,12 @@ CREATE TABLE public.users (
     sub character varying(255) NOT NULL
 );
 
-CREATE TABLE public.favorites (
+CREATE TABLE favorites (
     park_code character varying(250) NOT NULL,
     sub_user character varying(250)
 );
 
-CREATE TABLE public.newsletter_subscribers (
+CREATE TABLE newsletter_subscribers (
     name character varying(250),
     email character varying(250),
     id integer NOT NULL
