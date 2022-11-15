@@ -35,7 +35,9 @@ const ParkSummaryCards = ({parksInfo, num, title, seeMore, singleStateParksInfo}
         <div className='container' key={index} >
         <div className= "card">
           <div className= "image">
-            <img src ={item.images[0].url} alt={item.images[0].altText}/>
+            <img src ={item.images[0].url} onError={({ currentTarget }) => {
+            currentTarget.src="./logo.jpg";
+              }} alt={item.images[0].altText}/>
             <h3>{item.fullName}</h3>
             {user? <ToggleFavorite selectedPark={item}/> : <button onClick={() => loginWithRedirect()}><i className="fa-regular fa-heart"></i></button>}
           
