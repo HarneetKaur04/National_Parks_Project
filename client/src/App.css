@@ -889,9 +889,7 @@ font-size: 20px;
   color: white;
   font-size: 20px;
 }
-.form {
-  margin-bottom: 8%;
-}
+
 
 .formBorder {
   display: flex;
@@ -901,17 +899,18 @@ font-size: 20px;
   flex-wrap: wrap;
 }
 
-.formSide{
-  flex:2;
+.formSide, .formSide2{
+  /* flex:4; */
   background: rgb(226, 202 ,176,1);
   height: 300px;
   margin: 0.50%;
   border-radius: 12px;
-  
+  width:300px;
 }
+
 .formcentre {
-  flex:4;
-  height: 400px;
+  flex:6;
+  /* height: 400px; */
   text-align: center;
   background: #074787;
   border-radius: 12px;
@@ -925,14 +924,16 @@ font-size: 20px;
   color: white;
   font-size: 20px;
   font-weight: lighter;
+  
 }
 #add-user-name, #add-user-email{
   width:50%;
 }
-.formSide h3 {
+.formSide2 h3 {
   text-align: center;
   margin-top: 15%;
   padding:2%;
+  max-height: fit-content;
 }
 
 #add-user-name #add-user-email{
@@ -990,7 +991,35 @@ text-decoration: wavy;
   .us-state-map {
     width: 400px;
   }
+  .formBorder {
+    width: 80%;
 
+  }
+  .formSide, .formSide2, .formcentre{
+    width: 100%;
+    margin: 2%;
+  }
+  .full_container{
+    width: 100%;
+  }
+  
+}
+
+@media (max-width:715px)  { 
+  .full_container{
+    width: 100%;
+    display: block;
+    height: fit-content;
+  }
+  .video_space {
+    margin: 2%;
+  }
+  .video_space3 {
+    display: flex;
+  }
+
+ 
+  
 }
 @media (max-width:410px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
   .us-state-map {
@@ -998,6 +1027,12 @@ text-decoration: wavy;
   }
 
 }
+@media (max-width:830px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+ 
+
+}
+
+
 
 
 

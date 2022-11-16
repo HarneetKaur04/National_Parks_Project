@@ -69,7 +69,7 @@ const Form = () => {
         </h4>
       {submitted? (<p>Registered Successfully!</p>): null}
       </form>
-      <div className="formSide">
+      <div className="formSide2">
         <h3>"In every walk with nature one receives far more than he seeks." <br/> <br/> - John Muir</h3>
       </div>
       </div>

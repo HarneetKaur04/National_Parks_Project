@@ -3,9 +3,11 @@ import ReactPlayer from 'react-player'
 
 const ParkVideo = () => {
   return (
-    <div className='full_container'> 
-        <div className="video_space">
+    <div className='full_container' > 
+        <div className="video_space" >
+          <div className="video_space3">
         <ReactPlayer style={{margin: 'auto'}} url="https://www.youtube.com/watch?v=KcI_xfryMD0"/>
+        </div>
         </div>
         <div className="video_space2">
             <h3 className="video_heading">Our Great National Parks</h3>
