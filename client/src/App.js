@@ -47,10 +47,13 @@ function App() {
 
   return (
     <>
-    {/* <Routes>
+    <Routes>
         <Route path="/" element={<Landing />} />
-    </Routes> */}
-    <div className="App">
+        <Route
+            path="*"
+            element={
+              <>
+      <div className="App">
       <NavBar/>
       <Routes>
         <Route path="/me" element={<Profile user={user}/>} />
@@ -62,8 +65,11 @@ function App() {
         <Route path='/myparks' element={<MyParks parksInfo={allParksData}/>}/>
         <Route path='/contact' element={<ContactUs />}/>
       </Routes>
-      
     </div>
+    </>
+            }
+            />
+    </Routes>
     </>
   );
 }

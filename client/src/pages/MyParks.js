@@ -41,7 +41,7 @@ useEffect(()=> {
   return (
     <div>
         {userValid? <ParkSummaryCards parksInfo={moreDataOfSamePark} num ={1} title ={"My Favorites"}/>: (<p><span>
-            <button onClick={() => loginWithRedirect()}>Please login to save your favorites!</button>
+            <button className="button_login" onClick={() => loginWithRedirect()}>Please login to save your favorites!</button>
                 </span></p>)}
         {/* {favParks ? (moreDataOfSamePark.map(item=> (
             <>
