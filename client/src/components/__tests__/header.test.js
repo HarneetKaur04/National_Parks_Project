@@ -11,12 +11,12 @@ describe('Image', () => {
       expect(image).toHaveAttribute('alt', 'mountains');
     });
 
-    // test("should call mapHandler callback when clicked on USA MAP", () => {
-    //     const event = jest.fn();
-    //     const { getByTestId } = render(<USAMap onClick={event}/>);
-    //     const inputEventElement = getByTestId('content-input3');
-    //     fireEvent.click(inputEventElement);
-    //     expect(event).toHaveBeenCalled();
-    //   });
+    test("should call mapHandler callback when clicked on USA MAP", () => {
+        const event = jest.fn();
+        const { getByTestId } = render(<USAMap onClick={event}/>);
+        const inputEventElement = getByTestId('content-input3');
+        fireEvent.click(inputEventElement);
+        expect(event).toHaveBeenCalled();
+      });
 
   });
