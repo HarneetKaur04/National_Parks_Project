@@ -8,7 +8,15 @@
 .App_landing {
   width: 100%;
 }
-
+.fa-1x {
+  font-size: 1.5rem;
+}
+.navbar-toggler.toggler-example {
+  cursor: pointer;
+}
+.dark-blue-text {
+  color: white;
+}
 .link {
   text-decoration: none;
   color: inherit;
@@ -192,14 +200,21 @@ font-weight: bold;
   flex: 3;
   margin:3%;
   font-size: 25px;
-
+  font-weight: bold;
+}
+.headerStateSelect p a{
+  color: white;
+  background-color: #016381;
+  padding: 3px 15px;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
 path {
   pointer-events: all;
 }
 path:hover {
-  fill: #928C2E;
+  fill: #016381;
   cursor: pointer;
 }
 

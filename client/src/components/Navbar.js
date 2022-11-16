@@ -15,12 +15,18 @@ const Navbar= () =>{
 
 
   return (
+
     <div className="top">
       <div className="topLeft">
       <Link className="link" to="/home">
               <img className="topImgLeft" src='/logo.jpg'/>
         </Link>
       </div>
+      {/* <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fas fa-bars fa-1x"></i></span></button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+         </div> */}
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
@@ -50,9 +56,9 @@ const Navbar= () =>{
           </li>
         </ul>
       </div>
+
       <div className="topRight">
-  
-      {!user ? null : (<><Link className="link" to="/me">
+        {!user ? null : (<><Link className="link" to="/me">
             <img
               className="topImgRight"
               src="https://static6.depositphotos.com/1010340/585/v/600/depositphotos_5859083-stock-illustration-panda-cartoon.jpg"
@@ -71,6 +77,7 @@ const Navbar= () =>{
         </div>
       </nav>
     </div>
+    
     </div>
   );
 }
