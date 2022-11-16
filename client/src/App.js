@@ -1,5 +1,4 @@
 import "./App.css";
-// import ReactPlayer from 'react-player'
 import React, {useState, useEffect} from 'react'
 import NavBar from "./components/Navbar";
 import Profile from "./components/profile";
@@ -14,13 +13,11 @@ import SingleActivity from "./components/singleActivity";
 import ContactUs from "./pages/ContactUs";
 import { Route, Routes, Link } from 'react-router-dom';
 
-
 function App() {
   const [allParksData, setAllParksData] = useState([])
   const [allActivitiesData, setAllActivitiesData] = useState([])
 
   const { user } = useAuth0();
-
  
     const handleAllParksData = async () => {
       fetch("/parks")

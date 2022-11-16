@@ -8,7 +8,15 @@
 .App_landing {
   width: 100%;
 }
-
+.fa-1x {
+  font-size: 1.5rem;
+}
+.navbar-toggler.toggler-example {
+  cursor: pointer;
+}
+.dark-blue-text {
+  color: white;
+}
 .link {
   text-decoration: none;
   color: inherit;
@@ -152,7 +160,8 @@ font-weight: bold;
 
 .headerTitleSml {
   color: white;
-
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .headerTitleRight {
@@ -163,6 +172,7 @@ font-weight: bold;
 .headerTitleLg {
   font-size: 60px;
   color: white;
+  font-weight: bold;
 
 }
 
@@ -184,6 +194,7 @@ font-weight: bold;
 }
 .us-state-map {
   flex: 9;
+  width: 700px;
 }
 
 .headerStateSelect {
@@ -192,14 +203,22 @@ font-weight: bold;
   flex: 3;
   margin:3%;
   font-size: 25px;
-
+  font-weight: bold;
+}
+.headerStateSelect a{
+  color: white;
+  background-color: #016381;
+  padding: 3px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 path {
   pointer-events: all;
 }
 path:hover {
-  fill: #928C2E;
+  fill: #016381;
   cursor: pointer;
 }
 
@@ -522,8 +541,8 @@ h4 {
 }
 .heading button {
 background: white;
-height: 35px;
-width: 10%;
+height: fit-content;
+width: fit-content;
 border-radius: 18px;
 margin: 0.5%;
 font-weight: bold;
@@ -870,9 +889,7 @@ font-size: 20px;
   color: white;
   font-size: 20px;
 }
-.form {
-  margin-bottom: 8%;
-}
+
 
 .formBorder {
   display: flex;
@@ -882,17 +899,18 @@ font-size: 20px;
   flex-wrap: wrap;
 }
 
-.formSide{
-  flex:2;
+.formSide, .formSide2{
+  /* flex:4; */
   background: rgb(226, 202 ,176,1);
   height: 300px;
   margin: 0.50%;
   border-radius: 12px;
-  
+  width:300px;
 }
+
 .formcentre {
-  flex:4;
-  height: 400px;
+  flex:6;
+  /* height: 400px; */
   text-align: center;
   background: #074787;
   border-radius: 12px;
@@ -906,14 +924,16 @@ font-size: 20px;
   color: white;
   font-size: 20px;
   font-weight: lighter;
+  
 }
 #add-user-name, #add-user-email{
   width:50%;
 }
-.formSide h3 {
+.formSide2 h3 {
   text-align: center;
   margin-top: 15%;
   padding:2%;
+  max-height: fit-content;
 }
 
 #add-user-name #add-user-email{
@@ -967,14 +987,53 @@ text-decoration: wavy;
     font-size: 20px;
   }
 
-@media (max-width:1360px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+@media (max-width:1025px)  { /*  Desktops, large screens. */ 
+  .us-state-map {
+    width: 400px;
+  }
+  .formBorder {
+    width: 80%;
 
+  }
+  .formSide, .formSide2, .formcentre{
+    width: 100%;
+    margin: 2%;
+  }
+  .full_container{
+    width: 100%;
+  }
+  
+}
 
+@media (max-width:715px)  { 
+  .full_container{
+    width: 100%;
+    display: block;
+    height: fit-content;
+  }
+  .video_space {
+    margin: 2%;
+  }
+  .video_space3 {
+    display: flex;
+  }
+
+ 
+  
+}
+@media (max-width:410px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+  .us-state-map {
+    width: 200px;
+  }
 
 }
-@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
-@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (max-width:830px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+ 
+
+}
+
+
+
 
 
 
