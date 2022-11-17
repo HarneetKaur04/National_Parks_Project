@@ -1,9 +1,19 @@
+<p align="center"><img src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/logo.jpg" width=40% height=30%><p/>
+Project Link: https://server-dmw7.onrender.com
+
+
 ## Contents
 Create full stack apps with React and Express. Run your client, server and do a restart of your dump db to have a full-stack project working in minutes
+
 
 ## Overview
 National Parks USA is a webpage that let users explore new territories and open the door to new discoveries in nature and themselves. Users can save their favorite parks too. The website responds to the needs of the users and the devices they're using.
 ![Computer and mobile Device Responsive Layout](https://raw.githubusercontent.com/HarneetKaur04/National_Parks_Project/main/client/public/DeviceView.png)
+
+## Techstack
+
+### Libraries & Frameworks
+
 
 ### Installation
 1. Go to your source directory in your terminal and run the command `git clone https://github.com/Yosolita1978/React-Express-PairProgramming.git NAMENEWDIRECTORY`
