@@ -128,7 +128,7 @@ font-size: 20px;
 
 .topImgLeft {
   width: 200px;
-  height: 80px;
+  height: 90px;
   object-fit: cover;
   cursor: pointer;
   display: flex;
@@ -1016,6 +1016,17 @@ text-decoration: wavy;
     width: 100%;
   }
 }
+
+@media (max-width:980px)  { 
+
+.top {
+  display: block;
+}
+.topRight {
+  justify-content: center;
+} 
+
+}
 @media (max-width:715px)  { 
   .full_container{
     width: 100%;
@@ -1031,15 +1042,7 @@ text-decoration: wavy;
   .singleParkPost {
     display: block;
 }
-}
-@media (max-width:980px)  { 
 
-.top {
-  display: block;
-}
-.topRight {
-  justify-content: center;
-} 
 }
 
 @media (max-width:420px)  { 
@@ -1049,6 +1052,12 @@ text-decoration: wavy;
   .topList{
     display: block;
     text-align: center;
+  }
+  .topLeft {
+    display: block;
+  }
+  .topImgLeft {
+    width: 100%;
   }
 }
 
