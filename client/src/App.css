@@ -30,10 +30,11 @@
 
 .navbar-nav.ml-auto {
   background-color: white;
+  border-radius: 4px;
+  width: max-content;
 }
 .btn.btn-danger.btn-block {
 font-size: 20px;
-font-weight: bold;
 }
 
 .landing_start{
@@ -72,20 +73,25 @@ font-weight: bold;
   display: flex;
   align-items: center;
   border-radius: 10px;
-  height: 100px;
   color: white;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 .topLeft {
-  flex: 3;
+  /* flex: 3; */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding:1%;
 }
 
 .topRight{
   justify-content: right;
+  padding:1%;
+  flex: 3;
+  text-align: right;
+  display: flex;
+  align-items: center;
 }
 
 .topIcon {
@@ -96,14 +102,22 @@ font-weight: bold;
 
 .topCenter {
   flex: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:1%;
+  width: 100%;
+  flex-direction: column;
 }
 
 .topList {
   display: flex;
+  width: 100%;
   justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .topListItem {
@@ -606,7 +620,7 @@ transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 .image h3 {
   margin-left: 5px;
-  height: 45px;
+  height: 52px;
 }
 
  .image img {
@@ -993,7 +1007,6 @@ text-decoration: wavy;
   }
   .formBorder {
     width: 80%;
-
   }
   .formSide, .formSide2, .formcentre{
     width: 100%;
@@ -1002,9 +1015,7 @@ text-decoration: wavy;
   .full_container{
     width: 100%;
   }
-  
 }
-
 @media (max-width:715px)  { 
   .full_container{
     width: 100%;
@@ -1017,20 +1028,27 @@ text-decoration: wavy;
   .video_space3 {
     display: flex;
   }
-
- 
-  
 }
-@media (max-width:410px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+@media (max-width:980px)  { 
+
+.top {
+  display: block;
+}
+.topRight {
+  justify-content: center;
+} 
+}
+
+@media (max-width:420px)  { 
   .us-state-map {
-    width: 200px;
+    width: 300px;
   }
-
+  .topList{
+    display: block;
+    text-align: center;
+  }
 }
-@media (max-width:830px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
- 
 
-}
 
 
 

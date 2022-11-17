@@ -16,18 +16,15 @@ const Navbar= () =>{
 
   return (
 
+  
+
     <div className="top">
       <div className="topLeft">
       <Link className="link" to="/home">
               <img className="topImgLeft" src='/logo.jpg'/>
         </Link>
       </div>
-      {/* <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-        class="fas fa-bars fa-1x"></i></span></button>
-         <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-         </div> */}
-      <div className="topCenter">
+         <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
             <Link className="link" to="/home">
@@ -57,6 +54,8 @@ const Navbar= () =>{
         </ul>
       </div>
 
+   
+      
       <div className="topRight">
         {!user ? null : (<><Link className="link" to="/me">
             <img
@@ -67,7 +66,6 @@ const Navbar= () =>{
           </Link>
           <span>Hello {user.name}</span></>) }
      
-      </div>
       <div className="nav-container mb-3">
       <nav className="navbar navbar-expand-md navbar-light bg-light">
         <div className="container">
@@ -77,8 +75,9 @@ const Navbar= () =>{
         </div>
       </nav>
     </div>
-    
     </div>
+    </div> 
+    
   );
 }
 export default Navbar;
