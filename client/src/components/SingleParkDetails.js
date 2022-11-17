@@ -62,12 +62,12 @@ const SingleParkDetails = () => {
           </h2>
           <h2 className='postTitle'>THINGS TO DO
             <div className='posts' >
-      {park.activities.slice(0,8).map((item,index) => (
+      {park.activities.length > 1 ? park.activities.slice(0,8).map((item,index) => (
               <div className="card_imgPark" key={index}>
             <h3>{item.name}</h3>
               </div> 
       )     
-    )} 
+    ): <p>No Activity Data Found</p>} 
             </div>
           </h2>
         </div>
