@@ -40,7 +40,7 @@ const SingleParkDetails = () => {
             alt={park.images[0].altText}
           />
           <h1 className="singlePostTitle">
-          {park.fullName}
+          {park.fullName.toUpperCase()}
           </h1>
         </div> 
       </div>
@@ -52,8 +52,8 @@ const SingleParkDetails = () => {
             </p>
           </h4>
           <h4>Fees: <span className="info_Park" >{park.entranceFees[0].cost} $ <p className='info_Park'>{park.entranceFees[0].description}</p></span></h4>
-          <h4>Alerts:</h4>
-          <span className="info_Park" >{park.directionsInfo} <a href={park.directionsUrl}>Directions</a></span>
+          <h4>Directions:</h4>
+          <span className="info_Park" >{park.directionsInfo} <a href={park.directionsUrl}>Details</a></span>
 
         </div>
         <div className="parkPost">

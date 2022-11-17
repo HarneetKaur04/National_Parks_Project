@@ -124,11 +124,14 @@ font-size: 20px;
   margin-right: 20px;
   font-size: 18px;
   font-weight: 300;
+  padding:1%;
   cursor: pointer;
 }
 
 .topListItem:hover{
-    color: gray;
+    color: black;
+    background-color:white;
+    border-radius: 3px;
 }
 
 .topImgLeft {
@@ -307,7 +310,7 @@ path:hover {
 
 .parkPost {
   flex: 9;
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   margin: 20px;
   background-color: #e4f5f4;
@@ -338,7 +341,7 @@ h4 {
  
 }
 .sidebarTop p{
-  font-size: 15px;
+  font-size: 20px;
   font-weight: lighter;
 }
 .info_Park {
@@ -349,13 +352,15 @@ h4 {
 .postTitle {
   font-size: 35px;
   width: 100%;
-  margin: 15px;
+  /* margin: 15px; */
   text-align: center;
 }
 .postTitle p{
   font-size: 20px;
-  margin-left: 20px;
+  margin: 20px;
   text-align: left;
+  margin-bottom: 10%;
+  font-weight:lighter;
 }
 
 
@@ -382,7 +387,7 @@ h4 {
 .singlePostTitle{
   text-align: center;
   margin: 10px;
-  font-size: 40px;
+  font-size: 50px;
 }
 .singlePostEdit {
   float: right;
@@ -712,7 +717,7 @@ button {
   overflow: hidden;
   border-radius: 100%;
   margin: 3%;
-  cursor: pointer;
+  /* cursor: pointer; */
   position: relative;
   background-color: #b4d5effc;
   font-size: medium;
@@ -878,7 +883,7 @@ font-size: 20px;
     flex-wrap: wrap;
     overflow: hidden;
     background-image: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80");
-    margin-bottom: 8%;
+    margin-bottom: 3%;
     border-radius: 10px;
     height: 800px;
   }
@@ -904,7 +909,9 @@ font-size: 20px;
   font-size: 20px;
 }
 
-
+.form {
+  margin-bottom: 4%;
+}
 .formBorder {
   display: flex;
   width: 80%;
@@ -924,7 +931,6 @@ font-size: 20px;
 
 .formcentre {
   flex:6;
-  /* height: 400px; */
   text-align: center;
   background: #074787;
   border-radius: 12px;
@@ -1028,6 +1034,9 @@ text-decoration: wavy;
   .video_space3 {
     display: flex;
   }
+  .singleParkPost {
+    display: block;
+}
 }
 @media (max-width:980px)  { 
 
