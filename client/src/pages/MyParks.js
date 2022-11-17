@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useAuth0 } from '@auth0/auth0-react';
 import ParkSummaryCards from '../components/ParkSummaryCards';
-import ToggleFavorite from '../components/ToggleFavorite';
 
 const MyParks = ({parksInfo}) => {
     const { loginWithRedirect, user} = useAuth0();
@@ -22,7 +21,6 @@ const MyParks = ({parksInfo}) => {
             console.log(favParks, "favParks");
         }
             )      
-        
     }
 }
 
@@ -43,15 +41,6 @@ useEffect(()=> {
         {userValid? <ParkSummaryCards parksInfo={moreDataOfSamePark} num ={1} title ={"My Favorites"}/>: (<p><span>
             <button className="button_login" onClick={() => loginWithRedirect()}>Please login to save your favorites!</button>
                 </span></p>)}
-        {/* {favParks ? (moreDataOfSamePark.map(item=> (
-            <>
-        <p>{item.park_code}</p>
-        <ToggleFavorite selectedPark={item}/>
-        </>
-        ))): (<p><span>
-                    <a href="">Log in to see your favorite!</a>
-                </span></p>)} */}
-
     </div>
   )
 }

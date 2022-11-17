@@ -11,13 +11,8 @@ const Navbar= () =>{
   if (isLoading) {
     return <Loading />;
   }
-
-
-
-  return (
-
   
-
+  return (
     <div className="top">
       <div className="topLeft">
       <Link className="link" to="/home">

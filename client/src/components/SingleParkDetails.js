@@ -20,9 +20,7 @@ const SingleParkDetails = () => {
       };
 
       useEffect(()=> {
-        handleDisplay()
-        
-        
+        handleDisplay()        
       },[])
 
       console.log(park, "check if park info set correctly")

@@ -1,8 +1,8 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import USAMap from "react-usa-map";
 import { Link } from 'react-router-dom'
 
-const Header = ({parksInfo}) => {
+const Header = () => {
 
   const [stateSelected, setStateSelected] = useState(null)
 

@@ -1,7 +1,7 @@
 import ThingsToDo from '../components/ThingsToDo'
-import SingleActivity from '../components/singleActivity'
-const Activities = ({activitiesInfo}) => {
 
+
+const Activities = ({activitiesInfo}) => {
 
   return (
     <>
