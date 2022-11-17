@@ -19,13 +19,11 @@ const Header = ({parksInfo}) => {
         alt="mountains"
       />
       <div className="headerTitles">
-
         <div className="headerTitleLg">The Great Outdoors</div>
         <div className="headerTitleSml">EXPLORE ~ AWAKEN ~ DISCOVER</div>
         <span className='headerStateSelect'>{!stateSelected? <p>Select a State</p> : (<><p>You Selected:</p><Link to="/allparks" state={{ data: stateSelected }}>{stateSelected}</Link></>)}</span>
         <div className="map"> 
         <USAMap data-testid="content-input3" onClick={mapHandler} />
-        
       </div>
     </div>
   </div>
