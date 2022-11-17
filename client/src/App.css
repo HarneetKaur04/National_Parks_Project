@@ -31,8 +31,14 @@ font-size: 20px;
 
 .landing_start{
   position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
 }
-
+video {
+  width: 100vw;
+  height: 100vh;
+}
 .landing_start_button {
   cursor: pointer;
   position: absolute;
@@ -694,7 +700,6 @@ button {
   overflow: hidden;
   border-radius: 50%;
   margin: 3%;
-  cursor: pointer;
   position: relative;
 }
 .card_img:nth-child(even){
