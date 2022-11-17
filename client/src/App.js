@@ -22,7 +22,7 @@ function App() {
 
  
     const handleAllParksData = async () => {
-      fetch("/parks")
+      fetch("http://localhost:5000/parks")
         .then((response) => response.json())
         .then((parksData) => {
             setAllParksData(parksData.data);
@@ -30,7 +30,7 @@ function App() {
           };
           
     const handleAllActivitiesData = async () => {
-            fetch("/activities")
+            fetch("http://localhost:5000/activities")
               .then((response) => response.json())
               .then((activitiesData) => {
                 setAllActivitiesData(activitiesData.data);
