@@ -1,12 +1,11 @@
-### Template for a Express and React App Project
+## Contents
 Create full stack apps with React and Express. Run your client, server and do a restart of your dump db to have a full-stack project working in minutes
 
-# Step by Step instructions - To use this project as your start point
-You can follow this instructions and code along with the video - [setup instructions working](https://www.dropbox.com/s/tthmdat3n3vp3be/SettingUpTemplate.mov?dl=0)
+## Overview
+National Parks USA is a webpage that let users explore new territories and open the door to new discoveries in nature and themselves. Users can save their favorite parks too. The website responds to the needs of the users and the devices they're using.
 
-### For create the whole project
+### Installation
 1. Go to your source directory in your terminal and run the command `git clone https://github.com/Yosolita1978/React-Express-PairProgramming.git NAMENEWDIRECTORY`
-![You will something like this in your terminal.](https://github.com/Yosolita1978/screenshoots/blob/main/template/Screen%20Shot%202022-03-20%20at%207.50.46%20PM.png?raw=true)
 
 2. To clean your folder from the owner git, run the command `rm -rf .git` ( - You don't want to work with the git of the owner of this Template)
 3. Run the command `git init` to start your git repository 
