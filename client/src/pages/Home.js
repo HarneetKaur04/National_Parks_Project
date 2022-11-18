@@ -14,7 +14,7 @@ const Home = ({parksInfo, activitiesInfo}) => {
   return (
     <>
         <Header/>
-        <ParkSummaryCards parksInfo={parksInfo} num={15} title={"Explore"} seeMore={<button>See More</button>}/>
+        <ParkSummaryCards parksInfo={parksInfo} num={52} title={"Explore"} seeMore={<button>See More</button>}/>
         <Form />
         <ThingsToDo activitiesInfo={fewActivities} num= {4} seeMore={<button>See More</button>}/>
         <ParkVideo/>

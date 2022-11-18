@@ -210,6 +210,7 @@ video {
 .us-state-map {
   flex: 9;
   width: 700px;
+  height: fit-content;
 }
 
 .headerStateSelect {
@@ -284,6 +285,8 @@ path:hover {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+
+
 .posts {
   display : flex ;
   flex-wrap: wrap;
@@ -341,6 +344,7 @@ h4 {
 .sidebarTop p{
   font-size: 20px;
   font-weight: lighter;
+  word-wrap: break-word;
 }
 .info_Park {
   font-size: 20px;
@@ -478,6 +482,10 @@ transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   font-weight: bold;
 }
 
+.states_name {
+  word-wrap: break-word;
+}
+
 .card2 h3 {
   height: 50px;
 }
@@ -610,6 +618,7 @@ button {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  word-wrap: break-word;
 }
 
 .card_img h3 {

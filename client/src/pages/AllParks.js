@@ -40,7 +40,7 @@ const AllParks = ({parksInfo}) => {
   let allStates = parksInfo.map(item => item.states).filter(item => item.length == 2)
 
   // use set to find all unique states
-  let uniqueStates = [...new Set(allStates)]
+  let uniqueStates = [...new Set(allStates)].sort()
   console.log(uniqueStates, "uniqueStates")
 
 const handleSelectedState = (state) => {

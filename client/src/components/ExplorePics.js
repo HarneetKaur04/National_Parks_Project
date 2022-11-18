@@ -2,7 +2,7 @@ import React from 'react'
 
 const ExplorePics = ({parksInfo}) => {
 
-  let display_few_pics_of_parks = parksInfo.filter((item, index)=> index % 9 === 0)
+  let display_few_pics_of_parks = parksInfo.filter((item, index)=> index % 40 === 0)
   console.log(display_few_pics_of_parks, "display_few_pics_of_parks")
 
   return (
