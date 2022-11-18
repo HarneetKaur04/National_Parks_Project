@@ -25,7 +25,7 @@ National Parks USA is a webpage that let users explore new territories and open 
 <p align="center"><img src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/Screen%20Shot%202022-11-17%20at%2012.37.58%20PM.png" width=60% height=40%><p/>
 
 ## APIs
-<p align="center"><img src="" width=60% height=40%><p/>
+<p align="center"><img src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/Screen%20Shot%202022-11-17%20at%204.10.15%20PM.png" width=60% height=40%><p/>
 
 ## Style Guide
 <p align="center"><img src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/Screen%20Shot%202022-11-17%20at%201.29.03%20PM.png" width=60% height=40%><p/>
