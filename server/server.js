@@ -26,17 +26,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // creates an endpoint for the route /api
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.sendFile(path.join(REACT_BUILD_DIR, 'index.html'))
   // res.json({ message: 'Backend Running' });
 });
 
 // app.use("/", allRouter);
-app.use("/parks", parks);
-app.use("/activities", activities);
-app.use("/favorites", favorites);
-app.use("/user", user);
-app.use("/newsletterSubscriber", newsletterSubscriber);
+app.use("/api/parks", parks);
+app.use("/api/activities", activities);
+app.use("/api/favorites", favorites);
+app.use("/api/user", user);
+app.use("/api/newsletterSubscriber", newsletterSubscriber);
 
 // console.log that your server is up and running
 app.listen(PORT, () => {

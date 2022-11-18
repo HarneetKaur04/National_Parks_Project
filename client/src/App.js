@@ -22,7 +22,7 @@ function App() {
 
  
     const handleAllParksData = async () => {
-      fetch("/parks")
+      await fetch("/api/parks")
         .then((response) => response.json())
         .then((parksData) => {
             setAllParksData(parksData.data);
@@ -30,14 +30,14 @@ function App() {
           };
           
     const handleAllActivitiesData = async () => {
-            fetch("/activities")
+      await fetch("/api/activities")
               .then((response) => response.json())
               .then((activitiesData) => {
                 setAllActivitiesData(activitiesData.data);
                   });
               }
               
-              useEffect(() => {
+            useEffect(() => {
                 handleAllActivitiesData()
                 handleAllParksData()
               }, []);

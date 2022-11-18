@@ -3,7 +3,7 @@
     <a href="https://server-dmw7.onrender.com/">Render Link</a>
 </div>
 <br/>
-Demo Link: <a href="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/demovid.mov">National Parks USA Webpage Demo Recording</a>
+Demo Video Link: <a href="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/demovid.mov">National Parks USA Webpage Demo Recording</a>
 
 ## Contents
 - [Overview](#overview)

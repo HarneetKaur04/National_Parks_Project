@@ -14,7 +14,7 @@ const MyParks = ({parksInfo}) => {
         } else {
             setUserValid(true)
         let userSub = user.sub
-        await fetch(`/favorites/${userSub}`)
+        await fetch(`/api/favorites/${userSub}`)
         .then(response => response.json() )
         .then(display => {
             setFavParks(display);

@@ -9,9 +9,9 @@ const SingleParkDetails = () => {
     console.log(parkCode, "parkCodex")
 
     const [park, setPark] = useState();
-    console.log(`/parks/${parkCode}`, "check link")
+    console.log(`/api/parks/${parkCode}`, "check link")
     const handleDisplay = async () => {
-        await fetch(`/parks/${parkCode}`)
+        await fetch(`/api/parks/${parkCode}`)
         .then(response => response.json() )
         .then(parkData => {
           setPark(parkData.data[0])      
