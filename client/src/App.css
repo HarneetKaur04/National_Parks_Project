@@ -511,6 +511,8 @@ transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 .image h3 {
   margin-left: 5px;
   height: 52px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
  .image img {
