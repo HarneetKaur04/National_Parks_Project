@@ -296,7 +296,7 @@ path:hover {
 
 .postInfo {
   align-items: center;
-  transition: .10s ease;
+  transition: .40s ease;
   margin: 1px 25px 40px 25px;
 }
 
@@ -476,7 +476,7 @@ margin: 0.5%;
 font-weight: bold;
 font-size: 18px;
 box-shadow: inset 0 0 0 0 #275d23;
-transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+transition: color .4s ease-in-out, box-shadow .3s ease-in-out;
 }
 
 .heading button:hover {
@@ -492,7 +492,7 @@ transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   margin : 30px 10px;
   padding : 20px 15px;
   box-shadow : 0 5px 20px rgba(0,0,0,0.5);
-  transition : 0.3s ease-in-out;
+  transition : 0.4s ease-in-out;
   border-radius : 15px;
 }
 .container .card:hover {
@@ -562,7 +562,7 @@ transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   text-align : center;
   visibility : hidden;
   opacity : 0;
-  transition : 0.3s ease-in-out;
+  transition : 0.4s ease-in-out;
   overflow: hidden;
    display: -webkit-box;
   -webkit-line-clamp: 4;
@@ -667,7 +667,7 @@ text-decoration: none;
 align-items: center;
 color: black;
 box-shadow: inset 0 0 0 0 #54b3d6;
-transition: color .3s ease-in-out;
+transition: color 0.4s ease-in-out;
 font-size: 20px;
 }
 

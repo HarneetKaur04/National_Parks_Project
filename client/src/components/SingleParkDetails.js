@@ -6,10 +6,10 @@ import {useParams} from 'react-router-dom'
 const SingleParkDetails = () => {
   let operating = []
     let {parkCode}= useParams();
-    console.log(parkCode, "parkCodex")
+    // console.log(parkCode, "parkCodex")
 
     const [park, setPark] = useState();
-    console.log(`/api/parks/${parkCode}`, "check link")
+    // console.log(`/api/parks/${parkCode}`, "check link")
     const handleDisplay = async () => {
         await fetch(`/api/parks/${parkCode}`)
         .then(response => response.json() )
@@ -23,8 +23,8 @@ const SingleParkDetails = () => {
         handleDisplay()        
       },[])
 
-      console.log(park, "check if park info set correctly")
-      console.log(operating, "operating")
+      // console.log(park, "check if park info set correctly")
+      // console.log(operating, "operating")
 
   return (
     <>

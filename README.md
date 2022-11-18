@@ -69,14 +69,15 @@ National Parks USA is a webpage that let users explore new territories and open 
 - Both server should run now with `npm start`
 
 ## Difficulties or Unsolved Problems
-- A user record is not stored in session when the user refreshes the page, although it shows on navbar the user is signed in.
-- USA Map React package lags when the user hovers over the state on the homepage to display the state name before clicking.
-- Parks data fetched with limit of 150. Activities data is fetched separately. Due to limit on national parks data, sometimes when user saves a park under activities page, it may not show up under favorite parks
+- A user record is not stored in session when the user refreshes the page, although it shows on navbar the user is signed in
+- Deploying on render, if user refreshes, request is sent to backend and not front-end and hence page errors out
+- USA Map React package lags when the user hovers over the state on the homepage to display the state name before clicking
 
 ## Future Development
-- Users could add a photo for their profile.
+- Users could add a photo for their profile
 - Weather forecast when details of single park is shown to user
-- Pagination since there are so many National Parks. Having feature to go to next page to get more National Parks Cards and activities.
+- Pagination since there are so many National Parks. Having feature to go to next page to get more National Parks Cards and activities
+- More testing unit and integration
 
 
 
