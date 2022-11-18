@@ -2,7 +2,7 @@
 <div align="center">
     <a href="https://server-dmw7.onrender.com/">Render Link</a>
 </div>
-<video src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/demo.mp4">
+<video src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/demovid.mov">
 
 
 ## Contents
