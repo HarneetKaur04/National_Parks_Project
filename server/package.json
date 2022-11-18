@@ -26,3 +26,4 @@
     "eslint-plugin-react": "^7.29.4"
   }
 }
+// psql -h dpg-cdpddhda499akahm08d0-a.oregon-postgres.render.com -U db_wovm_user db_wovm -f db.sql 
