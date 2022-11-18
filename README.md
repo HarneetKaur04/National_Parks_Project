@@ -1,10 +1,22 @@
 <p align="center"><img src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/logo.jpg" width=40% height=30%><p/>
-Project Link: https://server-dmw7.onrender.com
+ <div align="center">
+    <a href="https://server-dmw7.onrender.com/">Render Link</a>
+</div>
 
 
 ## Contents
-Create full stack apps with React and Express. Run your client, server and do a restart of your dump db to have a full-stack project working in minutes
-
+- [Overview](#overview)
+- [Techstack](#techstack)
+- - [Libraries & Frameworks](#libraries-and-frameworks)
+- - [Languages](#languages)
+- [Wireframes and User Flows](#wireframes-and-user-flows)
+- [Data Model](#data-model)
+- [APIs](#apis)
+- [Style Guide](#style-guide)
+- [Tools](#tools)
+- [Installation](#installation)
+- [Difficulties or Unsolved Problems](#difficulties-or-unsolved-problems)
+- [Future Development](#future-development)
 
 ## Overview
 National Parks USA is a webpage that let users explore new territories and open the door to new discoveries in nature and themselves. Users can save their favorite parks too. The website responds to the needs of the users and the devices they're using.
@@ -12,17 +24,17 @@ National Parks USA is a webpage that let users explore new territories and open 
 
 ## Techstack
 
-### Libraries & Frameworks
+### Libraries and Frameworks
 <p align="center"><img src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/Screen%20Shot%202022-11-17%20at%203.42.56%20PM.png" width=60% height=40%><p/>
 
 ### Languages
 <p align="center"><img src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/Screen%20Shot%202022-11-17%20at%203.43.03%20PM.png" width=60% height=40%><p/>
 
 ## Wireframes and User Flows
-<p align="center"><img src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/Screen%20Shot%202022-11-17%20at%2012.37.36%20PM.png" width=60% height=40%><p/>
+<p align="center"><img src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/Screen%20Shot%202022-11-17%20at%2012.37.36%20PM.png" width=80% height=50%><p/>
 
 ## Data Model
-<p align="center"><img src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/Screen%20Shot%202022-11-17%20at%2012.37.58%20PM.png" width=60% height=40%><p/>
+<p align="center"><img src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/Screen%20Shot%202022-11-17%20at%2012.37.58%20PM.png" width=80% height=50%><p/>
 
 ## APIs
 <p align="center"><img src="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/Screen%20Shot%202022-11-17%20at%204.10.15%20PM.png" width=60% height=40%><p/>
@@ -55,7 +67,7 @@ National Parks USA is a webpage that let users explore new territories and open 
 - Go to the cliente folder (`cd .. and cd client`) and run the command `npm install`
 - Both server should run now with `npm start`
 
-## Difficulties/Unsolved Problems
+## Difficulties or Unsolved Problems
 - A user record is not stored in session when the user refreshes the page, although it shows on navbar the user is signed in.
 - USA Map React package lags when the user hovers over the state on the homepage to display the state name before clicking.
 - Parks data fetched with limit of 150. Activities data is fetched separately. Due to limit on national parks data, sometimes when user saves a park under activities page, it may not show up under favorite parks
