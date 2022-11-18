@@ -27,8 +27,8 @@ const SingleActivity = ({activitiesInfo}) => {
         <div className='container' key={index} >
             <div className= "card2">
                 <h3>{item.fullName}</h3>
-                <p>State: <span className="states_name">{item.states}</span></p><br/>
-                <Link to={`/allparks/${item.parkCode}`}>Explore</Link><br/><br/>
+                <p>State: <div className="states_name">{item.states}</div></p><br/>
+                <Link to={`/allparks/${item.parkCode}`}>Explore</Link><br/>
                 {user? (<><br/><ToggleFavorite selectedPark={item}/></>): <button data-testId="buttonFav"><i className="fa-regular fa-heart" onClick={() => loginWithRedirect()}></i></button>}
             </div>    
         </div>

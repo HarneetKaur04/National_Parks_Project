@@ -94,7 +94,7 @@ video {
 
 .topIcon {
   font-size: 20px;
-  color: #444;
+  color: white;
   cursor: pointer;
 }
 
@@ -154,6 +154,34 @@ video {
 .topSearchIcon {
   font-size: 18px;
   color: #666;
+  cursor: pointer;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  border-radius: 4px;
+}
+
+.footerCenter {
+  align-items: center;
+  padding:1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: #074787;
+  border-radius: 4px;
+}
+.social_media {
+  margin: 3%;
+  color: white;
   cursor: pointer;
 }
 
@@ -482,10 +510,6 @@ transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   font-weight: bold;
 }
 
-.states_name {
-  word-wrap: break-word;
-}
-
 .card2 h3 {
   height: 50px;
 }
@@ -497,6 +521,12 @@ transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
   padding: 2%;
   border-radius: 4px;
   font-size: 50;
+}
+
+.card2 p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0.2%;
 }
 
 .container .card .image {

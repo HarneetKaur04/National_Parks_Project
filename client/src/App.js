@@ -12,6 +12,7 @@ import SingleParkDetails from "./components/SingleParkDetails"
 import SingleActivity from "./components/singleActivity";
 import ContactUs from "./pages/ContactUs";
 import { Route, Routes, Link } from 'react-router-dom';
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
               <>
       <div className="App">
       <NavBar/>
+     
       <Routes>
         <Route path="/me" element={<Profile user={user}/>} />
         <Route path='/home' element={<Home parksInfo={allParksData} activitiesInfo={allActivitiesData}/>}/>
@@ -64,6 +66,7 @@ function App() {
         <Route path='/myparks' element={<MyParks parksInfo={allParksData}/>}/>
         <Route path='/contact' element={<ContactUs />}/>
       </Routes>
+      <Footer/>
     </div>
     </>
             }

@@ -51,7 +51,7 @@ const SingleParkDetails = () => {
           </h4>
           <h4>Fees: <span className="info_Park" >{park.entranceFees[0].cost} $ <p className='info_Park'>{park.entranceFees[0].description}</p></span></h4>
           <h4>Directions:</h4>
-          <span className="info_Park" >{park.directionsInfo} <a href={park.directionsUrl}>Details</a></span>
+          <span className="info_Park" >{park.directionsInfo} <a href={park.directionsUrl} target="_blank">Details</a></span>
 
         </div>
         <div className="parkPost">
