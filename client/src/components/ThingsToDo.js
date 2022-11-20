@@ -1,23 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const ThingsToDo = ({activitiesInfo, seeMore}) => {
+const ThingsToDo = ({ activitiesInfo, seeMore }) => {
 
-console.log(activitiesInfo, "activitiesInfo****")
+  console.log(activitiesInfo, "activitiesInfo****")
 
   return (
     <>
-    <div className='heading'>
-    <h2>Things to Do</h2>
-    <Link to="/activities">{seeMore}</Link>
-    </div>
-    <div className='posts' >
-    {activitiesInfo.map((item,index) => (
-        <div className="card_img" key={index}>
-          <h3><Link to={`/activities/${item.name}`} state={{ data: item.name }}>{item.name}</Link></h3>
-        </div> 
-      )     
-    )} 
+      <div className='heading'>
+        <h2>Things to Do</h2>
+        <Link to="/activities">{seeMore}</Link>
+      </div>
+      <div className='posts' >
+        {activitiesInfo.map((item, index) => (
+          <div className="card_img" key={index}>
+            <h3><Link to={`/activities/${item.name}`} state={{ data: item.name }}>{item.name}</Link></h3>
+          </div>
+        )
+        )}
       </div>
     </>
   )

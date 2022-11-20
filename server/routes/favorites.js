@@ -55,7 +55,7 @@ router.get("/:user", async (req, res) => {
     try {     
         let userDetails = req.params.user
 
-        const favorites  = await db.query('SELECT * FROM favorites where sub_user=$1', [userDetails]);
+        const favorites  = await db.query('SELECT park_code FROM favorites where sub_user=$1', [userDetails]);
     res.send(favorites);
     }
     catch {

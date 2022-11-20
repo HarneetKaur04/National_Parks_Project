@@ -78,6 +78,7 @@ National Parks USA is a webpage that let users explore new territories and open 
 - Weather forecast when details of single park is shown to user
 - Pagination since there are so many National Parks. Having feature to go to next page to get more National Parks Cards and activities
 - More testing unit and integration
+- Go to top button on page
 
 
 

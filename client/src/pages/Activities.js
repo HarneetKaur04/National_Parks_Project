@@ -1,12 +1,8 @@
 import ThingsToDo from '../components/ThingsToDo'
 
-
-const Activities = ({activitiesInfo}) => {
-
+const Activities = ({ activitiesInfo }) => {
   return (
-    <>
-        <ThingsToDo activitiesInfo={activitiesInfo} num= {1} />
-    </>
+    <ThingsToDo activitiesInfo={activitiesInfo} num={1} />
   )
 }
 
