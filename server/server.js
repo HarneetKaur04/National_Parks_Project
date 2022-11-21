@@ -3,7 +3,6 @@ import cors from "cors";
 import bodyParser from "body-parser";
 import path from "path"
 import { fileURLToPath } from 'url';
-// import favorite from "./routes/favorite.js";
 import parks from "./routes/parks.js";
 import activities from "./routes/activities.js";
 import favorites from "./routes/favorites.js";
@@ -25,18 +24,18 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// creates an endpoint for the route 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(REACT_BUILD_DIR, 'index.html'))
-  // res.json({ message: 'Backend Running' });
-});
-
 // app.use("/", allRouter);
 app.use("/api/parks", parks);
 app.use("/api/activities", activities);
 app.use("/api/favorites", favorites);
 app.use("/api/user", user);
 app.use("/api/newsletterSubscriber", newsletterSubscriber);
+
+// creates an endpoint for the route 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(REACT_BUILD_DIR, 'index.html'))
+});
+
 
 // Check your server is up and running
 app.listen(PORT, () => {
