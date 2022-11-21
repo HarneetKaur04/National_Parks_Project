@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // creates an endpoint for the route 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(REACT_BUILD_DIR, 'index.html'))
   // res.json({ message: 'Backend Running' });
 });

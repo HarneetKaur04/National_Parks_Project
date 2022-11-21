@@ -5,6 +5,8 @@
 <br/>
 Demo Video Link: <a href="https://github.com/HarneetKaur04/National_Parks_Project/blob/main/client/public/demovid.mov">National Parks USA Webpage Demo Recording</a>
 
+Test User you can use: abc@test.com  password: bpPMNhx3WY74khp
+
 ## Contents
 - [Overview](#overview)
 - [Techstack](#techstack)
