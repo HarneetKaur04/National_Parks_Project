@@ -43,9 +43,16 @@ const SingleParkDetails = () => {
           <div className='singleParkPost'>
             <div className="sidebarPark">
               <h4 className='sidebarTop'>Operating Hours
-                <p>
-                  {Object.entries(parkData.operatingHours[0].standardHours)}
-                </p>
+              {parkData.operatingHours[0].standardHours ? 
+                <p> 
+                  Mon:  {parkData.operatingHours[0].standardHours.monday} <br/>
+                  Tues:  {parkData.operatingHours[0].standardHours.tuesday}<br/>
+                  Wed:  {parkData.operatingHours[0].standardHours.wednesday}<br/>
+                  Thurs:  {parkData.operatingHours[0].standardHours.thursday}<br/>
+                  Fri:  {parkData.operatingHours[0].standardHours.friday}<br/>
+                  Sat:  {parkData.operatingHours[0].standardHours.saturday}<br/>
+                  Sun:  {parkData.operatingHours[0].standardHours.sunday}
+                </p> : "No data found"}
               </h4>
               <h4>Fees: <span className="info_Park" >{parkData.entranceFees[0].cost} $ <p className='info_Park'>{parkData.entranceFees[0].description}</p></span></h4>
               <h4>Directions:</h4>
