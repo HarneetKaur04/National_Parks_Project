@@ -496,6 +496,7 @@ transition: color .4s ease-in-out, box-shadow .3s ease-in-out;
 button {
   margin-left: 6px;
   margin-bottom: 4px;
+  margin-top: 3%;
   font-family: 'Red Hat Text', sans-serif;
   border: none;
   background:none;
