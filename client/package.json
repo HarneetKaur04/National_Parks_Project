@@ -45,6 +45,9 @@
   "devDependencies": {
     "dom-testing-library": "^5.0.0",
     "global-jsdom": "^8.6.0",
-    "jsdom": "^20.0.2"
+    "jest": "^27.5.1",
+    "jest-fetch-mock": "^3.0.3",
+    "jsdom": "^20.0.2",
+    "nock": "^13.2.9"
   }
 }

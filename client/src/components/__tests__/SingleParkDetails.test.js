@@ -1,7 +1,6 @@
-import { screen, render, fireEvent } from "@testing-library/react";
+import { screen, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import SingleParkDetails from '../SingleParkDetails'
-
 
 describe("SingleParkDetails", ()=> {
     it('should render SingleParkDetails component and display image at top', () => {
@@ -9,5 +8,4 @@ describe("SingleParkDetails", ()=> {
         expect(screen.findAllByRole('img',{
             name: /park$/i}));
     });
-
 })

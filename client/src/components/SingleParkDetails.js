@@ -11,7 +11,7 @@ const SingleParkDetails = () => {
   // Data of the current park.
   const [parkData, setParkData] = useState();
 
-  const handleDisplay = async () => {
+const handleDisplay = async () => {
     await fetch(`/api/parks/${parkCode}`)
       .then(response => response.json())
       .then(parkData => {
@@ -54,7 +54,7 @@ const SingleParkDetails = () => {
                   Sun:  {parkData.operatingHours[0].standardHours.sunday}
                 </p> : "No data found"}
               </h4>
-              <h4>Fees: <span className="info_Park" >{parkData.entranceFees[0].cost} $ <p className='info_Park'>{parkData.entranceFees[0].description}</p></span></h4>
+              <h4>Fees: <span className="info_Park" > $ {parkData.entranceFees[0].cost}<p className='info_Park'>{parkData.entranceFees[0].description}</p></span></h4>
               <h4>Directions:</h4>
               <span className="info_Park" >{parkData.directionsInfo} <a href={parkData.directionsUrl} target="_blank">Details</a></span>
             </div>
