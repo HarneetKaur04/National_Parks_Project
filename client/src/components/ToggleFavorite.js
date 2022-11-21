@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useAuth0 } from '@auth0/auth0-react';
 
+// Input: props => selectedPark: selected individual park info
 const ToggleFavorite = ({ selectedPark }) => {
     // List of all parks marked as favorite by the logged in user.
     const [favParks, setFavParks] = useState([])
@@ -22,7 +23,7 @@ const ToggleFavorite = ({ selectedPark }) => {
 
     const handleClick = async () => {
         // console.log(user.sub, "check user Details")
-        if (!favParks.find(item => item.park_code == selectedPark.parkCode)) {
+        if (!favParks.find(item => item.park_code === selectedPark.parkCode)) {
 
             await fetch(`/api/favorites`, {
                 method: "POST",
@@ -41,7 +42,7 @@ const ToggleFavorite = ({ selectedPark }) => {
                 .then(response => response.json())
                 .then(data => {
                     // console.log(fav.filter(item=> item.park_code != selectedPark.parkCode), "delete request")
-                    setFavParks([favParks.filter(item => item.park_code != selectedPark.parkCode)])
+                    setFavParks([favParks.filter(item => item.park_code !== selectedPark.parkCode)])
                 })
         }
     }
@@ -49,7 +50,7 @@ const ToggleFavorite = ({ selectedPark }) => {
     // console.log(fav, "info after request")
     return (
         <div>
-            <button data-testId="buttonFav" onClick={() => handleClick()}>{user ? (!favParks.find(item => item.park_code == selectedPark.parkCode) ? <i className="fa-regular fa-heart"></i> : <i className="fa-solid fa-heart"></i>) : <i className="fa-regular fa-heart">onClick={() => loginWithRedirect()}</i>}
+            <button data-testId="buttonFav" onClick={() => handleClick()}>{user ? (!favParks.find(item => item.park_code === selectedPark.parkCode) ? <i className="fa-regular fa-heart"></i> : <i className="fa-solid fa-heart"></i>) : <i className="fa-regular fa-heart">onClick={() => loginWithRedirect()}</i>}
             </button>
         </div>
     )

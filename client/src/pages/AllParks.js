@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react';
 import ToggleFavorite from '../components/ToggleFavorite'
 
+// Input: props => parksInfo stores all parksInfo fetched fron National Parks API
 const AllParks = ({ parksInfo }) => {
 
   // Stores a US state if one was selected from the map on the
@@ -43,7 +44,7 @@ const AllParks = ({ parksInfo }) => {
   }
 
   // Store all states. Extracted from 'parksInfo' and can contains duplicates.
-  let allStates = parksInfo.map(item => item.states).filter(item => item.length == 2)
+  let allStates = parksInfo.map(item => item.states).filter(item => item.length === 2)
 
   // Store all states in sorted order.
   let uniqueStates = [...new Set(allStates)].sort()
@@ -55,8 +56,7 @@ const AllParks = ({ parksInfo }) => {
     toggleOpen()
   }
 
-
-  console.log(selectedState, "check******")
+  console.log(selectedState, "check selected state")
   return (
     <div>
       <div className="dropdown">
@@ -76,7 +76,7 @@ const AllParks = ({ parksInfo }) => {
         </button>
       </div>
 
-      {selectedState ? <ParkSummaryCards singleStateParksInfo={selectedState} parksInfo={parksInfo} num={1} title={`${selectedState} National Parks`} /> : search ? (<div className='container1' >
+      {selectedState ? <ParkSummaryCards singleStateParksInfo={selectedState} parksInfo={parksInfo} selectionIndex={1} title={`${selectedState} National Parks`} /> : search ? (<div className='container1' >
         <br />
         {filteredData.map((item, index) =>
           <div className='container' key={index} >
@@ -97,7 +97,7 @@ const AllParks = ({ parksInfo }) => {
             </div>
           </div>)}
       </div>
-      ) : <ParkSummaryCards parksInfo={parksInfo} num={1} title={"All National Parks"} />}
+      ) : <ParkSummaryCards parksInfo={parksInfo} selectionIndex={1} title={"All National Parks"} />}
 
     </div>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Input: props => parksInfo stores all parksInfo fetched fron National Parks API
 const ExplorePics = ({ parksInfo }) => {
 
   let parkToDisplay = parksInfo.filter((item, index) => index % 40 === 0)

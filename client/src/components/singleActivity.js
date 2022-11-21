@@ -4,6 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Loading from './loading';
 import ToggleFavorite from './ToggleFavorite';
 
+// Input: props => activitiesInfo stores all activitiesInfo fetched fron National Parks API
 const SingleActivity = ({ activitiesInfo }) => {
 
   // Stores the callback function required to login by redirecting to /authorize. 

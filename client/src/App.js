@@ -11,7 +11,7 @@ import MyParks from "./pages/MyParks";
 import SingleParkDetails from "./components/SingleParkDetails"
 import SingleActivity from "./components/singleActivity";
 import ContactUs from "./pages/ContactUs";
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import Footer from "./components/Footer";
 
 

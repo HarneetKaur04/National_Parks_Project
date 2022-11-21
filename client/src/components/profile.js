@@ -2,8 +2,7 @@ import React from 'react';
 
 const Profile = (props) => {
   let user = props.user;
-  console.log(user);
-
+  // console.log(user);
 
   return (
     <div>

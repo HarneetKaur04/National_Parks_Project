@@ -66,7 +66,7 @@ National Parks USA is a webpage that let users explore new territories and open 
 
 ### Now, back to the terminal to work on your frontend
 - Go to the cliente folder (`cd .. and cd client`) and run the command `npm install`
-- Both server should run now with `npm start`
+- Both server should run now with `npm run dev` under server side
 
 ## Difficulties or Unsolved Problems
 - A user record is not stored in session when the user refreshes the page, although it shows on navbar the user is signed in

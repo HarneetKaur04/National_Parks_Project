@@ -1,15 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const ThingsToDo = ({ activitiesInfo, seeMore }) => {
+//Input: props => 
+// activitiesInfo: stores all activitiesInfo fetched fron National Parks API
+// buttonInput: See More as assigned in home component
+// title: Things to do as assigned in home component
+const ThingsToDo = ({ activitiesInfo, buttonInput, title }) => {
 
-  console.log(activitiesInfo, "activitiesInfo****")
+  // console.log(activitiesInfo, "activitiesInfo****")
 
   return (
     <>
       <div className='heading'>
-        <h2>Things to Do</h2>
-        <Link to="/activities">{seeMore}</Link>
+        <h2>{title}</h2>
+        <Link to="/activities">{buttonInput}</Link>
       </div>
       <div className='posts' >
         {activitiesInfo.map((item, index) => (

@@ -1,9 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react';
+import { useAuth0 } from '@auth0/auth0-react'
 import ToggleFavorite from './ToggleFavorite'
 
-const ParkSummaryCards = ({ parksInfo, num, title, seeMore, singleStateParksInfo }) => {
+// Input: props => 
+// parksInfo: stores all parksInfo fetched fron National Parks API
+// selectionIndex: index of every 54th item in array as assigned in home component
+// title: Explore as assigned in home component
+// buttonInput: See More as assigned in home component
+// singleStateParksInfo: user selected state from allparks page
+const ParkSummaryCards = ({ parksInfo, selectionIndex, title, buttonInput, singleStateParksInfo }) => {
 
   // Stores the callback function required to login by redirecting to /authorize. 
   const { loginWithRedirect, user } = useAuth0();
@@ -12,7 +18,7 @@ const ParkSummaryCards = ({ parksInfo, num, title, seeMore, singleStateParksInfo
     if (singleStateParksInfo) {
       return parksInfo.filter((item) => item.states === singleStateParksInfo)
     } else {
-      return parksInfo.filter((item, index) => index % num === 0)
+      return parksInfo.filter((item, index) => index % selectionIndex === 0)
     }
   }
 
@@ -22,7 +28,7 @@ const ParkSummaryCards = ({ parksInfo, num, title, seeMore, singleStateParksInfo
     <>
       <div className='heading'>
         <h2>{title}</h2>
-        <Link to="/allparks">{seeMore}</Link>
+        <Link to="/allparks">{buttonInput}</Link>
       </div>
       <div className='container1' >
         {parksToDisplay.map((item, index) =>
