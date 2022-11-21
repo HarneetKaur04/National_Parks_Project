@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// creates an endpoint for the route /api
+// creates an endpoint for the route 
 app.get('/', (req, res) => {
   res.sendFile(path.join(REACT_BUILD_DIR, 'index.html'))
   // res.json({ message: 'Backend Running' });
@@ -38,7 +38,7 @@ app.use("/api/favorites", favorites);
 app.use("/api/user", user);
 app.use("/api/newsletterSubscriber", newsletterSubscriber);
 
-// console.log that your server is up and running
+// Check your server is up and running
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
