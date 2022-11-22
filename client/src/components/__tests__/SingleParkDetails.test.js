@@ -1,11 +1,17 @@
-import { screen, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import SingleParkDetails from '../SingleParkDetails'
+import fetchMock from "fetch-mock";
+
+
 
 describe("SingleParkDetails", ()=> {
-    it('should render SingleParkDetails component and display image at top', () => {
-        render(<SingleParkDetails image="park"/>)
-        expect(screen.findAllByRole('img',{
-            name: /park$/i}));
-    });
+    beforeEach(() => {
+        fetchMock.get('/api/parks/${parkCode}', 200);
+      });
+      afterEach(() => {
+        fetchMock.restore();
+      });
+    
+      it('should mock fetch', () => {
+        expect(fetchMock).toBeDefined();
+      });
 })
