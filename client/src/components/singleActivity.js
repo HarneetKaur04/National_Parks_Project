@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react';
-import Loading from './loading';
+import Loading from "./Auth0/loading";
 import ToggleFavorite from './ToggleFavorite';
 
 // Input: props => activitiesInfo stores all activitiesInfo fetched fron National Parks API

@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from 'react'
 import NavBar from "./components/Navbar";
-import Profile from "./components/profile";
+import Profile from "./components/Auth0/profile";
 import { useAuth0 } from '@auth0/auth0-react';
 import Home from "./pages/Home";
 import AllParks from "./pages/AllParks";

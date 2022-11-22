@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { useAuth0 } from "@auth0/auth0-react";
-import AuthNav from "../auth-nav"
+import AuthNav from "../Auth0/auth-nav"
 
 const user = {
     email: "johndoe@me.com",

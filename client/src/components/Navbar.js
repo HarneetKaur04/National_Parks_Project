@@ -1,8 +1,8 @@
 import React from 'react';
-import AuthNav from './auth-nav';
+import AuthNav from './Auth0/auth-nav';
 import { Link } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
-import Loading from "./loading";
+import Loading from "./Auth0/loading";
 
 const Navbar = () => {
 
