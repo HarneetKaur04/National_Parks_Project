@@ -26,7 +26,6 @@ function App() {
   // Stores the current auth state.
   const { user } = useAuth0();
 
-
   const handleAllParksData = async () => {
     await fetch("/api/parks")
       .then((response) => response.json())

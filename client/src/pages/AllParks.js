@@ -76,28 +76,8 @@ const AllParks = ({ parksInfo }) => {
         </button>
       </div>
 
-      {selectedState ? <ParkSummaryCards singleStateParksInfo={selectedState} parksInfo={parksInfo} selectionIndex={1} title={`${selectedState} National Parks`} /> : search ? (<div className='container1' >
-        <br />
-        {filteredData.map((item, index) =>
-          <div className='container' key={index} >
-            <div className="card">
-              <div className="image">
-                <img src={item.images[0].url} onError={({ currentTarget }) => {
-                  currentTarget.src = "./logo.jpg";
-                }} alt={item.images[0].altText} />
-                <h3>{item.fullName}</h3>
-                {user ? <ToggleFavorite selectedPark={item} /> : <button onClick={() => loginWithRedirect()}><i className="fa-regular fa-heart"></i></button>}
-              </div>
-              <div className="content">
-                {item.description}
-              </div>
-              <div className="content" style={{ margin: 0 }}>
-                <Link to={`/allparks/${item.parkCode}`}>Explore</Link>
-              </div>
-            </div>
-          </div>)}
-      </div>
-      ) : <ParkSummaryCards parksInfo={parksInfo} selectionIndex={1} title={"All National Parks"} />}
+
+      {selectedState ? <ParkSummaryCards singleStateParksInfo={selectedState} parksInfo={parksInfo} selectionIndex={1} title={`${selectedState} National Parks`} /> : search ? (<ParkSummaryCards singleStateParksInfo={selectedState} parksInfo={filteredData} selectionIndex={1} title={`Found National Parks`} />) : <ParkSummaryCards parksInfo={parksInfo} selectionIndex={1} title={"All National Parks"} />}
 
     </div>
   )

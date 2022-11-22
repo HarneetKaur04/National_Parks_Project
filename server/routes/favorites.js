@@ -50,12 +50,15 @@ router.get("/:user/:selectedPark", async (req, res) => {
     return res.status(400).json();
   }
 })
-
+let logDetails = 0
 router.get("/:user", async (req, res) => {
+  console.log(++logDetails, "log details")
+  
   try {
     let userDetails = req.params.user
     const favorites = await db.query('SELECT park_code FROM favorites where sub_user=$1', [userDetails]);
     res.send(favorites);
+
   }
   catch {
     console.log(e)

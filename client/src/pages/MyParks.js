@@ -38,7 +38,6 @@ const MyParks = ({ parksInfo }) => {
         handleDisplay()
     }, [])
 
-
     return (
         <div>
             {userValid ? <ParkSummaryCards parksInfo={favParksInfo} selectionIndex={1} title={"My Favorites"} /> : (<p><span>
