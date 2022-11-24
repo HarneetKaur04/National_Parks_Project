@@ -22,7 +22,7 @@ Test User you can use: abc@test.com  password: bpPMNhx3WY74khp
 - [Future Development](#future-development)
 
 ## Overview
-National Parks USA is a webpage that let users explore new territories and open the door to new discoveries in nature and themselves. Users can save their favorite parks too. The website responds to the needs of the users and the devices they're using.
+The Great Outdoors is a webpage that let users explore new territories and open the door to new discoveries in nature and themselves. Users can plan their next vacation and explore different parks all across USA as well as search for parks which provides different activities. Users can save their favorite parks too. The website responds to the needs of the users and the devices they're using.
 ![Computer and mobile Device Responsive Layout](https://raw.githubusercontent.com/HarneetKaur04/National_Parks_Project/main/client/public/DeviceView.png)
 
 ## Techstack
